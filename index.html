@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Twin Oaks Education </title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <header>Twin Oaks Education</header>
+    <h1>Input Parameters</h1>
+    <div class="row">
+        <div class="column" id="words">
+            <h2>Add Key Words:</h2>
+            <form>
+                <input type="text" name="keywords" />
+                <button onclick="">Add</button>
+            </form>
+        </div>
+        <div class="column" id="criteria">
+            <h2>Add Search Criteria:</h2>
+            <form>
+                Location: 
+                <input type="text" name="location" />
+            </form>
+            <input type="checkbox" id="npo" name="npo" value="npo">
+            <label for="npo">Is This an NPO?</label></br>
+            <input type="checkbox" id="highschool" name="highschool" value="highschool">
+            <label for="highschool">Target only high school students?</label></br>
+            <form>
+                The organization was founded more than 
+                <input type="text" name="years" />
+                years ago.
+            </form>
+        </div>
+    </div>
+    <div id="search">
+        <button onclick="startSearch">Start Search!</button>
+    </div>
+</body>
+</html>

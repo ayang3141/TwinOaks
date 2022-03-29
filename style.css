@@ -3,3 +3,12 @@ header {
     font-weight: bold condensed;
     font-size: 25px;
 }
+.column{
+    float: left;
+    width: 50%;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
