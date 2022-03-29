@@ -17,8 +17,8 @@
             <!-- </form> -->
             <div id="content">
                 <p id="wordlist">Here are the key words to be searched</p>
-                <button onclick="clearList();">Clear List</button>
                 <ul id="theList"></ul>
+                <button onclick="clearList();">Clear List</button>
             </div>
             
         </div>
@@ -37,11 +37,15 @@
                 <input type="text" name="years" />
                 years ago.
             </form>
+            <form>
+                The company has more than 
+                <input type="text" name="emps" />
+                employees.
+            </form>
+            <button onclick="startSearch">Start Search!</button>
         </div>
     </div>
-    <div id="search">
-        <button onclick="startSearch">Start Search!</button>
-    </div>
+
     
 <script>
 function addword()
