@@ -11,11 +11,11 @@
     <div class="row">
         <div class="column" id="keys">
             <h2>Add Key Words / Phrases:</h2>
-            <form>
+            <!-- <form> -->
                 <!-- <input type="text" name="keywords" /> -->
                 <button onclick="addword()">Add Key Word</button>
 
-            </form>
+            <!-- </form> -->
             
             
         </div>
@@ -46,19 +46,17 @@
 <script>
 function addword()
 {
-    var destination=prompt("Add Key Word/Phrase Here");
-    if (destination!="")
+    var wurd=prompt("Add Key Word/Phrase Here");
+    if (wurd!="")
     {
         var p=document.getElementById("wordlist");
         p.innerHTML="Here are the key words to be searched";
         var li=document.createElement("li"); 	
-        li.innerHTML=destination;
+        li.innerHTML=wurd;
         var ul=document.getElementById("theList");
         ul.appendChild(li); 
     }
 }
-
-
 </script>
 
 </body>
