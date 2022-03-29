@@ -14,9 +14,12 @@
             <!-- <form> -->
                 <!-- <input type="text" name="keywords" /> -->
                 <button onclick="addword()">Add Key Word</button>
-
             <!-- </form> -->
-            
+            <div id="content">
+                <p id="wordlist">Here are the key words to be searched</p>
+                <button onclick="clearList();">Clear List</button>
+                <ul id="theList"></ul>
+            </div>
             
         </div>
         <div class="column" id="criteria">
@@ -39,11 +42,7 @@
     <div id="search">
         <button onclick="startSearch">Start Search!</button>
     </div>
-    <div id="content">
-        <p id="wordlist">Here are the key words to be searched</p>
-        <button onclick="clearList();">Clear List</button>
-        <ul id="theList"></ul>
-    </div>
+    
 <script>
 function addword()
 {
@@ -61,8 +60,11 @@ function addword()
 }
 function clearList()
 {
-    var ul = document.getElementById("theList");
-    u1.parentNode.removeChild(li);
+    let ul = document.getElementById("theList");
+    while (ul.firstChild)
+    {
+        ul.removeChild(ul.firstChild);
+    }
 }
 
 </script>
