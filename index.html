@@ -3,17 +3,21 @@
 <head>
     <title> Twin Oaks Education </title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta name="viewport" content="width=device-width" />
 </head>
 <body>
     <header>Twin Oaks Education</header>
     <h1>Input Parameters</h1>
     <div class="row">
-        <div class="column" id="words">
-            <h2>Add Key Words:</h2>
+        <div class="column" id="keys">
+            <h2>Add Key Words / Phrases:</h2>
             <form>
-                <input type="text" name="keywords" />
-                <button onclick="">Add</button>
+                <!-- <input type="text" name="keywords" /> -->
+                <button onclick="addword()">Add Key Word</button>
+
             </form>
+            
+            
         </div>
         <div class="column" id="criteria">
             <h2>Add Search Criteria:</h2>
@@ -35,5 +39,27 @@
     <div id="search">
         <button onclick="startSearch">Start Search!</button>
     </div>
+    <div id="content">
+        <p id="wordlist">Here are the key words to be searched</p>
+        <ul id="theList"></ul>
+    </div>
+<script>
+function addword()
+{
+    var destination=prompt("Add Key Word/Phrase Here");
+    if (destination!="")
+    {
+        var p=document.getElementById("wordlist");
+        p.innerHTML="Here are the key words to be searched";
+        var li=document.createElement("li"); 	
+        li.innerHTML=destination;
+        var ul=document.getElementById("theList");
+        ul.appendChild(li); 
+    }
+}
+
+
+</script>
+
 </body>
 </html>
