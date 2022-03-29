@@ -41,12 +41,14 @@
     </div>
     <div id="content">
         <p id="wordlist">Here are the key words to be searched</p>
+        <button onclick="clearList();">Clear List</button>
         <ul id="theList"></ul>
     </div>
 <script>
 function addword()
 {
-    var wurd=prompt("Add Key Word/Phrase Here");
+    // var wurd=document.getElementById("keywords").value;
+    var wurd = prompt("Add Key Word/Phrase Here");
     if (wurd!="")
     {
         var p=document.getElementById("wordlist");
@@ -57,6 +59,12 @@ function addword()
         ul.appendChild(li); 
     }
 }
+function clearList()
+{
+    var ul = document.getElementById("theList");
+    u1.parentNode.removeChild(li);
+}
+
 </script>
 
 </body>
