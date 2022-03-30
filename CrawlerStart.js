@@ -50,8 +50,10 @@ function startSearch(){
         search += '"'+keyWords[i].textContent+'" ';
     }
     console.log(search);
-    // run google search
+    sessionStorage.setItem("searchQuery", search)
 
+    // run google search
+    window.location.href = "Search.html";
     // Switch to results page
 
     // Display Results
