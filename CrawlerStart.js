@@ -32,7 +32,6 @@ document.addEventListener('keypress', function (e) {
 
 function startSearch(){
     var keyWords = document.getElementsByTagName("li")
-
     var search = '';
     // Get search criteria from textboxes and checkboxes
     
@@ -45,9 +44,10 @@ function startSearch(){
     if(document.getElementById("highschool").value=="highschool"){
 
     }
+    console.log(search);
     // Inserting Keywords
     for(var i=0;i<keyWords.length;i++){
-        search += '"'+keyWords[i]+'" ';
+        search += '"'+keyWords[i].textContent+'" ';
     }
     console.log(search);
     // run google search
