@@ -53,7 +53,7 @@ function startSearch(){
     sessionStorage.setItem("searchQuery", search)
 
     // run google search
-    window.location.href = "Search.html";
+    window.location.href = "search.html";
     // Switch to results page
 
     // Display Results
