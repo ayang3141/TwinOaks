@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Twin Oaks Education </title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <header>Twin Oaks Education</header>
+    <h1>Input Parameters</h1>
+    <div class="row">
+        <div class="column" id="keys">
+            <h2>Add Key Words / Phrases:</h2>
+            <form>
+                <input type="text" name="keywords" id="keywordInput" />
+            </form>
+            <button onclick="addword()">Add Key Word</button>
+            <div id="content">
+                <p id="wordlist">Here are the key words to be searched</p>
+                <ul id="theList"></ul>
+                <button onclick="clearList();">Clear List</button>
+            </div>
+            
+        </div>
+        <div class="column" id="criteria">
+            <h2>Add Search Criteria:</h2>
+            <form>
+                Location: 
+                <input type="text" name="location" id="location" />
+            </form>
+            <input type="checkbox" id="npo" name="npo" value="npo">
+            <label for="npo">Is This an NPO?</label></br>
+            <input type="checkbox" id="highschool" name="highschool" value="highschool">
+            <label for="highschool">Target only high school students?</label></br>
+            <form>
+                The organization was founded more than 
+                <input type="text" name="years" id="years" />
+                years ago.
+            </form>
+            <form>
+                The company has more than 
+                <input type="text" name="emps" id="emps" />
+                employees.
+            </form>
+            <button onclick="startSearch">Start Search!</button>
+        </div>
+    </div>
+
+    
+<script>
+function addword()
+{
+    var wurd=document.getElementById("keywordInput").value;
+    // var wurd = prompt("Add Key Word / Phrase Here");
+    if (wurd!="")
+    {
+        var p=document.getElementById("wordlist");
+        p.innerHTML="Here are the key words to be searched";
+        var li=document.createElement("li"); 	
+        li.innerHTML=wurd;
+        var ul=document.getElementById("theList");
+        ul.appendChild(li); 
+    }
+}
+function clearList()
+{
+    let ul = document.getElementById("theList");
+    while (ul.firstChild)
+    {
+        ul.removeChild(ul.firstChild);
+    }
+}
+
+
+document.addEventListener('keypress', function (e) {
+    if (e.keyCode === 13 || e.which === 13) {
+        e.preventDefault();
+        return false;
+    }
+});
+</script>
+</body>
+</html>
