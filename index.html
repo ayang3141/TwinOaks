@@ -42,42 +42,13 @@
                 <input type="text" name="emps" id="emps" />
                 employees.
             </form>
-            <button onclick="startSearch">Start Search!</button>
+            <button onclick="startSearch();">Start Search!</button>
         </div>
     </div>
 
     
-<script>
-function addword()
-{
-    var wurd=document.getElementById("keywordInput").value;
-    // var wurd = prompt("Add Key Word / Phrase Here");
-    if (wurd!="")
-    {
-        var p=document.getElementById("wordlist");
-        p.innerHTML="Here are the key words to be searched";
-        var li=document.createElement("li"); 	
-        li.innerHTML=wurd;
-        var ul=document.getElementById("theList");
-        ul.appendChild(li); 
-    }
-}
-function clearList()
-{
-    let ul = document.getElementById("theList");
-    while (ul.firstChild)
-    {
-        ul.removeChild(ul.firstChild);
-    }
-}
+<script src="CrawlerStart.js">
 
-
-document.addEventListener('keypress', function (e) {
-    if (e.keyCode === 13 || e.which === 13) {
-        e.preventDefault();
-        return false;
-    }
-});
 </script>
 </body>
 </html>
