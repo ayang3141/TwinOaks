@@ -7,7 +7,9 @@ window.onload=function main()
   var q = sessionStorage.getItem("searchQuery")//Get the search query store from crawlerStart.js
   //console.log(q) //Log the query for debugging purposes
 
-  var url = "https://www.googleapis.com/customsearch/v1?key=" + key + "&cx=" + cx +"&q=" + q +"&callback=hndlr"; //Assemble URL link for the api
+  var countryCode = "sg"
+
+  var url = "https://www.googleapis.com/customsearch/v1?key=" + key + "&cx=" + cx +"&q=" + q +"&callback=hndlr" +"&gl=" + countryCode; //Assemble URL link for the api
 
   var apiLink = document.createElement("script")
   apiLink.src = url;
