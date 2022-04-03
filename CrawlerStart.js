@@ -35,26 +35,25 @@ function startSearch(){
     var search = '';
     // Get search criteria from textboxes and checkboxes
     
-    var location=document.getElementById("location").value;
-    var years=document.getElementById("years").value;
-    var employees=document.getElementById("emps").value;
-    if(document.getElementById("npo").value=="npo"){
-
-    }
-    if(document.getElementById("highschool").value=="highschool"){
-
-    }
-    console.log(search);
     // Inserting Keywords
     for(var i=0;i<keyWords.length;i++){
         search += '"'+keyWords[i].textContent+'" ';
     }
+    var location=document.getElementById("location").value;
     console.log(search);
-    sessionStorage.setItem("searchQuery", search)
+    // sessionStorage.setItem("searchQuery", search)
 
-    // run google search
-    window.location.href = "search.html";
     // Switch to results page
-
-    // Display Results
+    // window.location.href = "search.html";
+    var numResults=document.getElementById("numResults").value;
+    if(parseInt(numResults)!=NaN){
+        var list=document.getElementById("results");
+        
+        for(var i=0; i<parseInt(numResults);i++){
+            var res=document.createElement("div");
+            res
+            res.innerHTML="There's text in this<br/>and a url too";
+            list.appendChild(res); 
+        }
+    }
 }
