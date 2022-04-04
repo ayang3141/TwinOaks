@@ -5,7 +5,7 @@ window.onload=function main()
 
   var cx = "c7b3e921ea64eca47";
 
-  var q = sessionStorage.getItem("searchQuery")
+  var q = "inurl:.org" + sessionStorage.getItem("searchQuery")
   console.log(q)
 
   var url = "https://www.googleapis.com/customsearch/v1?key=" + key + "&cx=" + cx +"&q=" + q +"&callback=hndlr";
