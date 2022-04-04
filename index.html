@@ -1,48 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Twin Oaks Education </title>
+    <title> Twin Oaks Partner Searching</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <meta name="viewport" content="width=device-width" />
 </head>
 <body>
-    <header>Twin Oaks Education</header>
-    <h1>Input Parameters</h1>
+    <h1>Twin Oaks | See Think Wonder Challenge | Partner Searching Site</h1>
     <div class="row">
-        <div class="column" id="keys">
-            <h2>Add Key Words / Phrases:</h2>
+        <div class="column" id="input">
             <form>
-                <input type="text" name="keywords" id="keywordInput" />
-            </form>
-            <button onclick="addword()">Add Key Word</button>
-            <div id="content">
-                <p id="wordlist">Here are the key words to be searched</p>
-                <ul id="theList"></ul>
-                <button onclick="clearList();">Clear List</button>
-            </div>
-            
-        </div>
-        <div class="column" id="criteria">
-            <h2>Add Search Criteria:</h2>
-            <form>
-                Location: 
+                Country / Region: 
                 <input type="text" name="location" id="location" />
             </form>
-            <input type="checkbox" id="npo" name="npo" value="npo">
-            <label for="npo">Is This an NPO?</label></br>
-            <input type="checkbox" id="highschool" name="highschool" value="highschool">
-            <label for="highschool">Target only high school students?</label></br>
+            <div class="row">
+                <div class="column" id="stuckwords">
+                    <h3>Basic Screening:</h3>
+                        <input type="checkbox" id="project" name="project" checked>
+                        <label for="project">Project-based learning</label><br/>
+                        <input type="checkbox" id="creative" name="creative" checked>
+                        <label for="creative">Creativity</label><br/>
+                        <input type="checkbox" id="collab" name="collab" checked>
+                        <label for="collab">Collaboration</label><br/>
+                        <input type="checkbox" id="problem" name="problem" checked>
+                        <label for="problem">Problem-solving</label><br/>
+                        <input type="checkbox" id="science" name="science" checked>
+                        <label for="science">Scientific thinking</label><br/>
+                        <input type="checkbox" id="critical" name="critical" checked>
+                        <label for="critical">Critical thinking</label><br/>
+                        <input type="checkbox" id="design" name="design" checked>
+                        <label for="design">Design</label><br/>
+                        <input type="checkbox" id="innovation" name="innovation" checked>
+                        <label for="innovation">Innovation</label><br/>
+                        <input type="checkbox" id="realWorld" name="realWorld" checked>
+                        <label for="realWorld">Read World Learning</label><br/>
+                        <input type="checkbox" id="leader" name="leader" checked>
+                        <label for="leader">Leadership</label><br/>
+                        <input type="checkbox" id="life" name="life" checked>
+                        <label for="life">Life-long learning</label><br/>
+                        <input type="checkbox" id="soft" name="soft" checked>
+                        <label for="soft">Soft skills</label><br/>
+                        <input type="checkbox" id="21" name="21" checked>
+                        <label for="21">21st century skills</label><br/>
+                </div>
+                <div class="column" id="newwords">
+                    <h3>New Screening:</h3>
+                    <form>
+                        <input type="text" name="keywords" id="keywordInput" />
+                    </form>
+                    <button onclick="addword()">Add</button>
+                    <div id="content">
+                        <p id="wordlist">Screening In Use</p>
+                        <ul id="theList"></ul>
+                        <button onclick="clearList();">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column" id="outputs">
             <form>
-                The organization was founded more than 
-                <input type="text" name="years" id="years" />
-                years ago.
-            </form>
-            <form>
-                The company has more than 
-                <input type="text" name="emps" id="emps" />
-                employees.
+                Search for top 
+                <input type="text" name="numResults" id="numResults" class="smalltextbox" />
+                results.
             </form>
             <button onclick="startSearch();">Start Search!</button>
+            <h2>Potential Partners:</h2>
+            <div id="results">
+                <!-- <div class="roundrect">
+                    There's text in this<br/>
+                    and a url too
+                </div>
+                <div class="roundrect">
+                    And in this one too<br>
+                    with a second url
+                </div> -->
+            </div>
         </div>
     </div>
 
