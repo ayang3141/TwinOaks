@@ -42,7 +42,9 @@ function startSearch(){
     var location=document.getElementById("location").value;
     console.log(search);
     // sessionStorage.setItem("searchQuery", search)
-
+  
+    // run google search
+    window.location.href = "search.html";
     // Switch to results page
     // window.location.href = "search.html";
     var numResults=document.getElementById("numResults").value;
