@@ -48,11 +48,14 @@ function startSearch(){
     var numResults=document.getElementById("numResults").value;
     if(parseInt(numResults)!=NaN){
         var list=document.getElementById("results");
-        
+        while (list.firstChild)
+        {
+            list.removeChild(list.firstChild);
+        }
         for(var i=0; i<parseInt(numResults);i++){
             var res=document.createElement("div");
-            res
             res.innerHTML="There's text in this<br/>and a url too";
+            res.classList.add('roundrect');
             list.appendChild(res); 
         }
     }
