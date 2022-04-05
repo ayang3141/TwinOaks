@@ -1,7 +1,11 @@
-//button.onclick=startSearch;
 window.onload = function initialize() {
     sessionStorage.setItem("searchQuery", "")
 }
+
+function initialize() {
+    sessionStorage.setItem("searchQuery", "");
+}
+
 function addword() {
     var wurd = document.getElementById("keywordInput").value;
     // var wurd = prompt("Add Key Word / Phrase Here");
@@ -30,10 +34,11 @@ document.addEventListener('keypress', function (e) {
 });
 
 function startSearch() {
+    initialize();
     var location = document.getElementById("location").value;
     console.log(sessionStorage.getItem("searchQuery"));
     // sessionStorage.setItem("searchQuery", search)
-
+    
     // Switch to results page
     // window.location.href = "search.html";
     var numResults = document.getElementById("numResults").value;
@@ -45,10 +50,13 @@ function startSearch() {
         console.log(box);
         if(box.checked && !sessionStorage.getItem("searchQuery").includes(box.id)){
             console.log(box.id);
-            sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + " " + box.id);
+            sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + box.id + " ");
         }
     }
-
+    var keyWords = document.getElementsByTagName("li");
+    for(var i=0;i<keyWords.length;i++){
+        sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + keyWords[i].textContent + " ");
+    }
     if (parseInt(numResults) != NaN) {
         var list = document.getElementById("results");
         while (list.firstChild) {
