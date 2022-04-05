@@ -40,7 +40,7 @@ function startSearch() {
     // sessionStorage.setItem("searchQuery", search)
 
     // run google search
-    window.location.href = "search.html";
+    // window.location.href = "search.html";
     // Switch to results page
     // window.location.href = "search.html";
     var numResults = document.getElementById("numResults").value;
@@ -54,7 +54,7 @@ function startSearch() {
 
         var cx = "c7b3e921ea64eca47";
 
-        var q = "inurl:.org" + sessionStorage.getItem("searchQuery")
+        var q = "inurl:.org";
         console.log(q)
 
         var url = "https://www.googleapis.com/customsearch/v1?key=" + key + "&cx=" + cx + "&q=" + q + "&callback=hndlr";

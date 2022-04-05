@@ -82,18 +82,20 @@
 <script src="CrawlerStart.js"> </script>
 <script>
     function hndlr(response) {
+        console.log("in hndlr");
+        console.log(response.items[0]);
+        var list = document.getElementById("results");
+        var numResults = document.getElementById("numResults").value;
+        console.log(numResults);
         for (var i = 0; i < parseInt(numResults); i++) {
+            console.log(i);
+            var item = response.items[i];
             var res = document.createElement("div");
-            res.innerHTML = "There's text in this<br/>and a url too";
             res.classList.add('roundrect');
+            res.innerHTML = "<p>" + item.htmlTitle + "</p>" + '<a href="' + item.link + '" target="_blank">' + item.link + "</a>";
+            console.log(item);
             list.appendChild(res);
         }
-      for (var i = 0; i < response.items.length; i++) {
-        var item = response.items[i];
-        // in production code, item.htmlTitle should have the HTML entities escaped.
-        document.getElementById("content").innerHTML += "<br>" + item.htmlTitle + ": " + item.link;
-        console.log(item)
-      }
     }
   </script>
 </body>

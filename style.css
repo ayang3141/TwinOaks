@@ -12,10 +12,10 @@ header {
     display: table;
     clear: both;
 }
-p {
+/* p {
     padding-left:20px;
     padding-bottom: 10px;
-}
+} */
 button{
     -moz-border-radius: 5px; 
     -webkit-border-radius: 5px;
