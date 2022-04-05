@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title> Twin Oaks Partner Searching</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <meta name="viewport" content="width=device-width" />
 </head>
+
 <body>
     <h1>Twin Oaks | See Think Wonder Challenge | Partner Searching Site</h1>
     <div class="row">
         <div class="column" id="input">
             <form>
-                Country / Region: 
+                Country / Region:
                 <input type="text" name="location" id="location" />
             </form>
             <div class="row">
                 <div class="column" id="stuckwords">
                     <h3>Basic Screening:</h3>
-                        <input type="checkbox" id="project" name="project" checked>
-                        <label for="project">Project-based learning</label><br/>
-                        <input type="checkbox" id="creative" name="creative" checked>
-                        <label for="creative">Creativity</label><br/>
-                        <input type="checkbox" id="collab" name="collab" checked>
-                        <label for="collab">Collaboration</label><br/>
-                        <input type="checkbox" id="problem" name="problem" checked>
-                        <label for="problem">Problem-solving</label><br/>
-                        <input type="checkbox" id="science" name="science" checked>
-                        <label for="science">Scientific thinking</label><br/>
-                        <input type="checkbox" id="critical" name="critical" checked>
-                        <label for="critical">Critical thinking</label><br/>
-                        <input type="checkbox" id="design" name="design" checked>
-                        <label for="design">Design</label><br/>
-                        <input type="checkbox" id="innovation" name="innovation" checked>
-                        <label for="innovation">Innovation</label><br/>
-                        <input type="checkbox" id="realWorld" name="realWorld" checked>
-                        <label for="realWorld">Read World Learning</label><br/>
-                        <input type="checkbox" id="leader" name="leader" checked>
-                        <label for="leader">Leadership</label><br/>
-                        <input type="checkbox" id="life" name="life" checked>
-                        <label for="life">Life-long learning</label><br/>
-                        <input type="checkbox" id="soft" name="soft" checked>
-                        <label for="soft">Soft skills</label><br/>
-                        <input type="checkbox" id="21" name="21" checked>
-                        <label for="21">21st century skills</label><br/>
+                    <input class="box" type="checkbox" id="Project-based learning" name="project">
+                    <label for="Project-based learning">Project-based learning</label><br />
+                    <input class="box" type="checkbox" id="Creativity" name="creative">
+                    <label for="Creativity">Creativity</label><br />
+                    <input class="box" type="checkbox" id="Collaboration" name="collab">
+                    <label for="Collaboration">Collaboration</label><br />
+                    <input class="box" type="checkbox" id="Problem-solving" name="problem" >
+                    <label for="Problem-solving">Problem-solving</label><br />
+                    <input class="box" type="checkbox" id="Scientific thinking" name="science" >
+                    <label for="Scientific thinking">Scientific thinking</label><br />
+                    <input class="box" type="checkbox" id="Critical thinking" name="critical" >
+                    <label for="Critical thinking">Critical thinking</label><br />
+                    <input class="box" type="checkbox" id="Design" name="design" >
+                    <label for="Design">Design</label><br />
+                    <input class="box" type="checkbox" id="Innovation" name="innovation" >
+                    <label for="Innovation">Innovation</label><br />
+                    <input class="box" type="checkbox" id="Real World Learning" name="realWorld" >
+                    <label for="Real World Learning">Real World Learning</label><br />
+                    <input class="box" type="checkbox" id="Leadership" name="leader" >
+                    <label for="leader">Leadership</label><br />
+                    <input class="box" type="checkbox" id="Life-long learning" name="life" >
+                    <label for="Life-long learning">Life-long learning</label><br />
+                    <input class="box" type="checkbox" id="Soft skills" name="soft" >
+                    <label for="Soft skills">Soft skills</label><br />
+                    <input class="box" type="checkbox" id="21st century skills" name="21" >
+                    <label for="21st century skills">21st century skills</label><br />
                 </div>
                 <div class="column" id="newwords">
                     <h3>New Screening:</h3>
@@ -59,7 +61,7 @@
         </div>
         <div class="column" id="outputs">
             <form>
-                Search for top 
+                Search for top
                 <input type="text" name="numResults" id="numResults" class="smalltextbox" />
                 results.
             </form>
@@ -78,25 +80,33 @@
         </div>
     </div>
 
-   
-<script src="CrawlerStart.js"> </script>
-<script>
-    function hndlr(response) {
-        console.log("in hndlr");
-        console.log(response.items[0]);
-        var list = document.getElementById("results");
-        var numResults = document.getElementById("numResults").value;
-        console.log(numResults);
-        for (var i = 0; i < parseInt(numResults); i++) {
-            console.log(i);
-            var item = response.items[i];
-            var res = document.createElement("div");
-            res.classList.add('roundrect');
-            res.innerHTML = "<p>" + item.htmlTitle + "</p>" + '<a href="' + item.link + '" target="_blank">' + item.link + "</a>";
-            console.log(item);
-            list.appendChild(res);
+
+    <script src="CrawlerStart.js"> </script>
+    <script>
+        function hndlr(response) {
+            console.log("in hndlr");
+            var list = document.getElementById("results");
+            var numResults = document.getElementById("numResults").value;
+            console.log(numResults);
+            if (response != null && response.items != null) {
+                for (var i = 0; i < Math.min(parseInt(numResults), Object.keys(response.items).length); i++) {
+                    console.log(i);
+                    var item = response.items[i];
+                    var res = document.createElement("div");
+                    res.classList.add('roundrect');
+                    res.innerHTML = "<p>" + item.htmlTitle + "</p>" + '<a href="' + item.link + '" target="_blank">' + item.link + "</a>";
+                    console.log(item);
+                    list.appendChild(res);
+                }
+            }
+            else{
+                var res = document.createElement("div");
+                res.classList.add('roundrect');
+                res.innerHTML = "<p>No Results Found</p>";
+                list.appendChild(res);
+            }
         }
-    }
-  </script>
+    </script>
 </body>
+
 </html>
