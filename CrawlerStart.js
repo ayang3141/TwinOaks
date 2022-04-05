@@ -43,7 +43,7 @@ function startSearch() {
     for(var i=0;i<boxes.length;i++){
         box = boxes[i];
         console.log(box);
-        if(box.checked){
+        if(box.checked && !sessionStorage.getItem("searchQuery").includes(box.id)){
             console.log(box.id);
             sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + " " + box.id);
         }
@@ -59,7 +59,7 @@ function startSearch() {
 
         var cx = "c7b3e921ea64eca47";
 
-        var q = "inurl:.org" + sessionStorage.getItem("searchQuery") + " " + location
+        var q = sessionStorage.getItem("searchQuery") + " \"" + location + "\""
         console.log(q)
 
         var url = "https://www.googleapis.com/customsearch/v1?key=" + key + "&cx=" + cx + "&q=" + q + "&callback=hndlr";
