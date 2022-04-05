@@ -1,7 +1,11 @@
 //button.onclick=startSearch;
+window.onload = function initialize() {
+    sessionStorage.setItem("searchQuery", "")
+}
 function addword() {
     var wurd = document.getElementById("keywordInput").value;
     // var wurd = prompt("Add Key Word / Phrase Here");
+    sessionStorage.setItem("searchQuery", sessionStorage.getItem(searchQuery) + wurd)
     if (wurd != "") {
         var p = document.getElementById("wordlist");
         p.innerHTML = "Here are the key words to be searched";
@@ -16,6 +20,7 @@ function clearList() {
     while (ul.firstChild) {
         ul.removeChild(ul.firstChild);
     }
+    initialize()
 }
 
 
@@ -27,23 +32,14 @@ document.addEventListener('keypress', function (e) {
 });
 
 function startSearch() {
-    var keyWords = document.getElementsByTagName("li")
-    var search = '';
-    // Get search criteria from textboxes and checkboxes
-
-    // Inserting Keywords
-    for (var i = 0; i < keyWords.length; i++) {
-        search += '"' + keyWords[i].textContent + '" ';
-    }
     var location = document.getElementById("location").value;
     console.log(search);
     // sessionStorage.setItem("searchQuery", search)
 
-    // run google search
-    // window.location.href = "search.html";
     // Switch to results page
     // window.location.href = "search.html";
     var numResults = document.getElementById("numResults").value;
+
     if (parseInt(numResults) != NaN) {
         var list = document.getElementById("results");
         while (list.firstChild) {
@@ -54,7 +50,7 @@ function startSearch() {
 
         var cx = "c7b3e921ea64eca47";
 
-        var q = "inurl:.org";
+        var q = "inurl:.org" + sessionStorage.getItem("searchQuery") + location
         console.log(q)
 
         var url = "https://www.googleapis.com/customsearch/v1?key=" + key + "&cx=" + cx + "&q=" + q + "&callback=hndlr";
