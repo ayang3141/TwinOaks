@@ -329,7 +329,7 @@ function startSearch() {
 
         var cx = "c7b3e921ea64eca47";
 
-        var exactTerms = location
+        var exactTerms = gl
 
         var orTerms = ''
 
