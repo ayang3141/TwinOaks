@@ -1,7 +1,31 @@
 header {
-    font-family: Futura, Trebuchet MS;
+    font-family: Noto Sans, sans-serif;
     font-weight: bold condensed;
     font-size: 25px;
+}
+li{
+    font-family: Noto Sans, sans-serif;
+    line-height: 14px;
+}
+h1{
+    font-family: Noto Sans, sans-serif;
+    line-height: 14px;
+}
+h2{
+    font-family: Noto Sans, sans-serif;
+    line-height: 14px;
+}
+h3{
+    font-family: Noto Sans, sans-serif;
+    line-height: 14px;
+}
+label{
+    font-family: Noto Sans, sans-serif;
+    line-height: 14px;
+}
+form{
+    font-family: Noto Sans, sans-serif;
+    line-height: 14px;
 }
 .column{
     float: left;
@@ -12,17 +36,25 @@ header {
     display: table;
     clear: both;
 }
-/* p {
-    padding-left:20px;
-    padding-bottom: 10px;
-} */
+p {
+    font-family: Noto Sans, sans-serif;
+    line-height: 14px;
+}
+a{
+    font-family: Noto Sans, sans-serif;
+    line-height: 14px;
+}
 button{
     -moz-border-radius: 5px; 
     -webkit-border-radius: 5px;
     border-radius: 5px;
+    font-family: Noto Sans, sans-serif;
+    line-height: 14px;
 }
 .smalltextbox{
     width: 20px;
+    font-family: Noto Sans, sans-serif;
+    line-height: 14px;
 }
 .roundrect{
     border: 2px solid #3b3b3b;
@@ -32,9 +64,12 @@ button{
     padding: 5px;
     margin-top: 5px;
     background-color: #dddddd;
+    font-family: Noto Sans, sans-serif;
+    line-height: 14px;
 }
 #content {
     padding:10px;
+    line-height: 14px;
 }
 
 #main_nav ul { padding: 0; margin: 0; }
