@@ -334,7 +334,7 @@ function startSearch() {
         var orTerms = ''
 
         
-        var q = sessionStorage.getItem("searchQuery") + "-filetype:pdf -filetype:ppt -filetype:doc" // + '\"' + location + '\"'
+        var q = sessionStorage.getItem("searchQuery") + '\"' + location + '\"' /*+ "inurl:.org"*/ + "-filetype:pdf"  
         console.log(q)
 
         var url = "https://customsearch.googleapis.com/customsearch/v1?key=" + key + "&cx=" + cx + "&q=" + q + "&cr=" + location + "&exactTerms="
