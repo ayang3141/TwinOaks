@@ -95,6 +95,19 @@ input{
     /* font-weight: bold; */
 }
 
+.small-column{
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+.large-column{
+    float: left;
+    height: 100%;
+    padding-left: 30px;
+    width: 67%;
+}
+
 .column {
     float: left;
     width: 50%;
@@ -151,12 +164,14 @@ button {
     padding: 5px;
     margin-top: 5px;
     margin-bottom: 15px;
+    max-width: 100%;
     font-family: Noto Sans, sans-serif;
     /* color: rgba(103, 56, 48, 1); */
     line-height: 14px;
     background: rgb(255,255,255);
     background: linear-gradient(8deg, rgba(255,255,255,1) 0%, rgba(217,181,154,1) 100%);
 }
+
 
 
 #content {
@@ -204,5 +219,9 @@ button {
 }
 
 #location{
-    width: 379px;
+    width: 100%;
+}
+
+#keywordInput{
+    width: 100%;
 }
