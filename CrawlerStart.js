@@ -39,6 +39,7 @@ document.addEventListener('keypress', function (e) {
 });
 
 function startSearch() {
+    sessionStorage.setItem("searchQuery", "")
     var location = document.getElementById("location").value;
     console.log(sessionStorage.getItem("searchQuery"));
 
@@ -48,15 +49,20 @@ function startSearch() {
     for (var i = 0; i < boxes.length; i++) {
         box = boxes[i];
         // console.log(box);
-        if (box.checked && !sessionStorage.getItem("searchQuery").includes(box.id)) {
+        if (box.checked && !sessionStorage.getItem("searchQuery").includes(box.id.replace(/\s/g, '+'))) {
             // console.log(box.id);
-            sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + box.id + " ");
+            if (sessionStorage.getItem("searchQuery") == "") {
+                sessionStorage.setItem("searchQuery", box.id.replace(/\s/g, '+'));
+            }
+            else {
+                sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + "+" + box.id.replace(/\s/g, '+'));
+            }
         }
     }
     var keyWords = document.getElementsByTagName("li");
     for (var i = 0; i < keyWords.length; i++) {
         if (!sessionStorage.getItem('searchQuery').includes(keyWords[i])) {
-            sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + keyWords[i].textContent + " ");
+            sessionStorage.setItem("searchQuery", "+" + sessionStorage.getItem("searchQuery") + keyWords[i].textContent);
         }
     }
 
@@ -333,15 +339,16 @@ function startSearch() {
 
     var exactTerms = gl
 
-    var orTerms = ''
+    var orTerms = ""
 
+    var hq = ""
 
-    var q = sessionStorage.getItem("searchQuery") + "-filetype:pdf -filetype:ppt -filetype:doc" // + '\"' + location + '\"'
+    var q = sessionStorage.getItem("searchQuery") + '+' + location + "+-filetype:pdf"
     console.log(q)
 
     console.log(sessionStorage.getItem("search"));
     var url = "https://customsearch.googleapis.com/customsearch/v1?key=" + key + "&cx=" + cx + "&q=" + q + "&cr=" + location + "&exactTerms="
-        + exactTerms + "&gl=" + gl + "&search=" + sessionStorage.getItem("search") + "&callback=hndlr";
+        + exactTerms + "&orTerms=" + orTerms + "&gl=" + gl + "&start=" +sessionStorage.getItem("search") + "&hq=" + hq + "&callback=hndlr";
 
     console.log(url);
     var apiLink = document.createElement("script")
@@ -386,7 +393,7 @@ function filterFunction() {
     }
 }
 
-function setLocation(location){
+function setLocation(location) {
     document.getElementById("myDropdown").classList.toggle("show");
     document.getElementById("location").value = location;
 }
