@@ -10,16 +10,20 @@
 
 <body>
     <div class="heading">
-        <a class="logolink" href="https://www.twinoaks-edu.com/">
+        <a class="logolink" href="https://www.twinoaks-edu.com/" target="_blank">
             <img src="logo.jfif" alt="Twin Oaks logo">
         </a>
-        <h1>Twin Oaks | See Think Wonder Challenge | Partner Searching Site</h1>
+        <div class="titles">
+        <h1>Twin Oaks</h1>
+        <h2>See Think Wonder Challenge</h2>
+        <h3>Partner Searching Site</h3>
+        </div>
     </div>
     <hr noshade>
     <div class="row">
         <div class="small-column" id="input">
             <form>
-                <h3>Country / Region:</h3>
+                <h5>Country / Region:</h5>
                 <input type="text" name="Country Code" id="location" placeholder="Search for a location"
                     onclick="showLocations();" onkeyup="filterFunction()" />
                 <div id="myDropdown" class="dropdown-content">
@@ -293,7 +297,7 @@
             </form>
             <div class="row">
                 <div class="column" id="stuckwords">
-                    <h3>Basic Screening:</h3>
+                    <h5>Basic Screening:</h5>
                     <input class="box" type="checkbox" id="Project-based learning" name="project">
                     <label for="Project-based learning">Project-based learning</label><br />
                     <input class="box" type="checkbox" id="Creativity" name="creative">
@@ -322,7 +326,7 @@
                     <label for="21st century skills">21st century skills</label><br />
                 </div>
                 <div class="column" id="newwords">
-                    <h3>New Screening:</h3>
+                    <h5>New Screening:</h5>
                     <form>
                         <input type="text" name="keywords" id="keywordInput" placeholder="Add new key words" />
                     </form>
@@ -338,11 +342,14 @@
         <div class="large-column" id="outputs">
             <div class="buttons" id="buttons">
                 <button onclick="startSearch();">Start Search!</button>
+            </div>
+            <h4>Potential Partners:</h4>
+            <div id="results">
+            </div>
+            <div id="pages">
+                <p id="pageNum" hidden>Page: 1</p>
                 <button id="lessRes" onclick="getLessResults();" hidden>Previous Page</button>
                 <button id="moreRes" onclick="getMoreResults();" hidden>Next Page</button>
-            </div>
-            <h2>Potential Partners:</h2>
-            <div id="results">
             </div>
         </div>
     </div>
@@ -361,19 +368,24 @@
                     var intervalID = '0';
                     var res = document.createElement("div");
                     res.classList.add('roundrect');
-                    res.innerHTML = "<p>" + item.htmlTitle + "</p>" + '<a href="' + item.link + '" target="_blank">' + item.link + "</a>";
+                    res.innerHTML = "<p class='resTitle'>" + item.htmlTitle + "</p>" + '<a class="resLink" href="' + item.link + '" target="_blank">' + item.link + "</a>";
                     list.appendChild(res);
                     // console.log(item);
                 }
                 // console.log(sessionStorage.getItem("search"));
                 if (sessionStorage.getItem("search") == 1) {
                     document.getElementById("moreRes").hidden = false;
+                    document.getElementById("moreRes").style = "display: inline-block;";
                     document.getElementById("lessRes").hidden = true;
                 }
                 else {
                     document.getElementById("moreRes").hidden = false;
+                    document.getElementById("moreRes").style = "display: inline-block;";
                     document.getElementById("lessRes").hidden = false;
+                    document.getElementById("lessRes").style = "display: inline-block;";
                 }
+                document.getElementById("pageNum").hidden = false;
+                    document.getElementById("pageNum").style = "display: inline-block;";
             }
             else {
                 var res = document.createElement("div");

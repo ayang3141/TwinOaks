@@ -1,6 +1,7 @@
 window.onload = function initialize() {
     sessionStorage.setItem("searchQuery", "")
     sessionStorage.setItem("search", 1)
+    sessionStorage.setItem("numPages", 1)
 }
 
 function initialize() {
@@ -16,9 +17,9 @@ function addword() {
         li.innerHTML = wurd;
         var ul = document.getElementById("theList");
         ul.appendChild(li);
+        document.getElementById("wordlist").hidden = false;
+        document.getElementById("clearinglist").hidden = false;
     }
-    document.getElementById("wordlist").hidden = false;
-    document.getElementById("clearinglist").hidden = false;
 }
 function clearList() {
     let ul = document.getElementById("theList");
@@ -359,12 +360,16 @@ function startSearch() {
 
 function getMoreResults() {
     sessionStorage.setItem("search", parseInt(sessionStorage.getItem("search")) + 10);
+    sessionStorage.setItem("numPages", parseInt(sessionStorage.getItem("numPages")) + 1);
+    document.getElementById("pageNum").innerText = "Page: " + sessionStorage.getItem("numPages");
     startSearch();
 }
 
 function getLessResults() {
     if (sessionStorage.getItem("search") > 1) {
         sessionStorage.setItem("search", sessionStorage.getItem("search") - 10);
+        sessionStorage.setItem("numPages", parseInt(sessionStorage.getItem("numPages")) - 1);
+        document.getElementById("pageNum").innerText = "Page: " + sessionStorage.getItem("numPages");
         startSearch();
     }
 }

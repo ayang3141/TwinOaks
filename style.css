@@ -27,10 +27,12 @@ hr {
     color: rgba(103, 56, 48, 1);
     background-color: rgba(103, 56, 48, 1);
     border-color: rgba(103, 56, 48, 1);
+    margin-top: 0px;
+    border-top: 0px;
 }
 
 img {
-    height: 120px;
+    height: 160px;
     vertical-align: middle;
 }
 
@@ -43,32 +45,60 @@ li {
 
 .heading {
     height: fit-content;
-    margin-left: -8px;
-    margin-bottom: 24px;
+    /* margin-left: -8px; */
+    margin-bottom: 0px;
+}
+
+.titles{
+    display: inline-block;
+    vertical-align: middle;
 }
 
 h1 {
     font-family: Noto Sans, sans-serif;
     line-height: 14px;
-    display: inline-block;
+    vertical-align: middle;
+    color: rgba(103, 56, 48, 1);
+    /* color: rgba(215, 126, 60, 1); */
+    font-weight: bold;
+    font-size: 42px;
+}
+
+h2{
+    font-family: Noto Sans, sans-serif;
+    line-height: 14px;
     vertical-align: middle;
     color: rgba(103, 56, 48, 1);
     font-weight: bold;
+    font-size: 24px;
+    margin-left:5px;
 }
 
-h2 {
+h3{
+    font-family: Noto Sans, sans-serif;
+    line-height: 14px;
+    vertical-align: middle;
+    color: rgba(103, 56, 48, 1);
+    font-weight: bold;
+    font-size: 20px;
+    margin-left:5px;
+}
+
+h4 {
     font-family: Noto Sans, sans-serif;
     line-height: 14px;
     /* color: rgba(103, 56, 48, 1); */
     font-weight: bold;
+    font-size: 20px;
 }
 
-h3 {
+h5 {
     font-family: Noto Sans, sans-serif;
     line-height: 14px;
     /* color: rgba(103, 56, 48, 1); */
     font-weight: bold;
-    font-size:20px;
+    font-size:18px;
+
 }
 
 label {
@@ -131,7 +161,12 @@ p {
 a {
     font-family: Noto Sans, sans-serif;
     line-height: 14px;
+    color: rgba(215, 126, 60, 1);
     /* color: rgba(103, 56, 48, 1); */
+}
+
+a.loc{
+    color: black;
 }
 
 button {
@@ -157,22 +192,25 @@ button {
 }
 
 .roundrect {
-    border: 2px solid rgba(103, 56, 48, 1);
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-    border-radius: 15px;
-    padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    border: 1px solid rgba(103, 56, 48, 1);
+    /* -moz-border-radius: 15px; */
+    /* -webkit-border-radius: 15px; */
+    /* border-radius: 15px; */
+    /* padding: 5px; */
+    /* margin-top: 5px; */
+    /* margin-bottom: 15px; */
     max-width: 100%;
     font-family: Noto Sans, sans-serif;
     /* color: rgba(103, 56, 48, 1); */
     line-height: 14px;
     background: rgb(255,255,255);
-    background: linear-gradient(8deg, rgba(255,255,255,1) 0%, rgba(217,181,154,1) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(217,181,154,1) 100%);
+    min-height: fit-content;
+    /* height: 100px; */
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 5px;
 }
-
-
 
 #content {
     padding: 10px;
@@ -184,7 +222,6 @@ button {
     position: relative;
     right: 200px;
     display: inline-block;
-    
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -196,9 +233,18 @@ button {
     border: 1px solid #ddd;
     z-index: 1;
     max-height: 500px;
-    overflow: auto;
-    
+    overflow: auto;    
 }
+
+p.resTitle{
+    margin-top: 0px;
+}
+/*
+a.resLink{
+    margin-bottom: 11px;
+     padding-bottom: 10px;
+     border-bottom: 10px; 
+} */
 
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -224,4 +270,14 @@ button {
 
 #keywordInput{
     width: 100%;
+}
+
+#pages{
+    margin-bottom: 10px;
+}
+
+#pageNum{
+    margin-left: 5px;
+    margin-right: 25px;
+    font-weight: bold;
 }
