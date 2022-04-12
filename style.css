@@ -26,7 +26,7 @@ hr {
     height: 10px;
     color: rgba(103, 56, 48, 1);
     background-color: rgba(103, 56, 48, 1);
-    border-color: rgba(103, 56, 48, 1);
+    border: solid rgba(103, 56, 48, 1);
     margin-top: 0px;
     border-top: 0px;
 }
@@ -39,6 +39,7 @@ img {
 li {
     font-family: Noto Sans, sans-serif;
     line-height: 14px;
+    margin-top: 8px;
     /* color: rgba(103, 56, 48, 1); */
     /* font-weight: bold; */
 }
@@ -181,6 +182,7 @@ button {
     /* color: rgba(103, 56, 48, 1); */
     border-color: rgba(103, 56, 48, 1);
     /* font-weight: bold; */
+    border-style: solid;
 }
 
 .smalltextbox {
@@ -188,7 +190,7 @@ button {
     font-family: Noto Sans, sans-serif;
     line-height: 14px;
     /* color: rgba(103, 56, 48, 1); */
-    border: 1px rgba(103, 56, 48, 1);
+    border: solid 1px rgba(103, 56, 48, 1);
 }
 
 .roundrect {
