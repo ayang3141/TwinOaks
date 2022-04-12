@@ -14,289 +14,16 @@
             <img src="logo.jfif" alt="Twin Oaks logo">
         </a>
         <div class="titles">
-        <h1>Twin Oaks</h1>
-        <h2>See Think Wonder Challenge</h2>
-        <h3>Partner Searching Site</h3>
+            <h2>See Think Wonder Challenge</h2>
+            <h3>Partner Searching Site</h3>
         </div>
     </div>
     <hr noshade>
     <div class="row">
         <div class="small-column" id="input">
-            <form>
-                <h5>Country / Region:</h5>
-                <input type="text" name="Country Code" id="location" placeholder="Search for a location"
-                    onclick="showLocations();" onkeyup="filterFunction()" />
-                <div id="myDropdown" class="dropdown-content">
-                    <a class="loc" onclick="setLocation('Afghanistan');">Afghanistan</a>
-                    <a class="loc" onclick="setLocation('Aland Islands');">Aland Islands</a>
-                    <a class="loc" onclick="setLocation('Albania');">Albania</a>
-                    <a class="loc" onclick="setLocation('Algeria');">Algeria</a>
-                    <a class="loc" onclick='setLocation("American Samoa");'>American Samoa</a>
-                    <a class="loc" onclick='setLocation("Andorra");'>Andorra</a>
-                    <a class="loc" onclick='setLocation("Angola");'>Angola</a>
-                    <a class="loc" onclick='setLocation("Anguilla");'>Anguilla</a>
-                    <a class="loc" onclick='setLocation("Antarctica");'>Antarctica</a>
-                    <a class="loc" onclick='setLocation("Antigua and Barbuda");'>Antigua and Barbuda</a>
-                    <a class="loc" onclick='setLocation("Argentina");'>Argentina</a>
-                    <a class="loc" onclick='setLocation("Armenia");'>Armenia</a>
-                    <a class="loc" onclick='setLocation("Aruba");'>Aruba</a>
-                    <a class="loc" onclick='setLocation("Australia");'>Australia</a>
-                    <a class="loc" onclick='setLocation("Austria");'>Austria</a>
-                    <a class="loc" onclick='setLocation("Azerbaijan");'>Azerbaijan</a>
-                    <a class="loc" onclick='setLocation("Bahamas");'>Bahamas</a>
-                    <a class="loc" onclick='setLocation("Bahrain");'>Bahrain</a>
-                    <a class="loc" onclick='setLocation("Bangladesh");'>Bangladesh</a>
-                    <a class="loc" onclick='setLocation("Barbados");'>Barbados</a>
-                    <a class="loc" onclick='setLocation("Belarus");'>Belarus</a>
-                    <a class="loc" onclick='setLocation("Belgium");'>Belgium</a>
-                    <a class="loc" onclick='setLocation("Belize");'>Belize</a>
-                    <a class="loc" onclick='setLocation("Benin");'>Benin</a>
-                    <a class="loc" onclick='setLocation("Bermuda");'>Bermuda</a>
-                    <a class="loc" onclick='setLocation("Bhutan");'>Bhutan</a>
-                    <a class="loc" onclick='setLocation("Bolivia");'>Bolivia</a>
-                    <a class="loc" onclick='setLocation("Bonaire, Sint Eustatius and Saba");'>Bonaire, Sint Eustatius
-                        and Saba</a>
-                    <a class="loc" onclick='setLocation("Bosnia and Herzegovina");'>Bosnia and Herzegovina</a>
-                    <a class="loc" onclick='setLocation("Botswana");'>Botswana</a>
-                    <a class="loc" onclick='setLocation("Bouvet Island");'>Bouvet Island</a>
-                    <a class="loc" onclick='setLocation("Brazil");'>Brazil</a>
-                    <a class="loc" onclick='setLocation("British Indian Ocean Territory");'>British Indian Ocean
-                        Territory</a>
-                    <a class="loc" onclick='setLocation("Brunei Darussalam");'>Brunei Darussalam</a>
-                    <a class="loc" onclick='setLocation("Bulgaria");'>Bulgaria</a>
-                    <a class="loc" onclick='setLocation("Burkina Faso");'>Burkina Faso</a>
-                    <a class="loc" onclick='setLocation("Burundi");'>Burundi</a>
-                    <a class="loc" onclick='setLocation("Cambodia");'>Cambodia</a>
-                    <a class="loc" onclick='setLocation("Cameroon");'>Cameroon</a>
-                    <a class="loc" onclick='setLocation("Canada");'>Canada</a>
-                    <a class="loc" onclick='setLocation("Cape Verde");'>Cape Verde</a>
-                    <a class="loc" onclick='setLocation("Cayman Islands");'>Cayman Islands</a>
-                    <a class="loc" onclick='setLocation("Central African Republic");'>Central African Republic</a>
-                    <a class="loc" onclick='setLocation("Chad");'>Chad</a>
-                    <a class="loc" onclick='setLocation("Chile");'>Chile</a>
-                    <a class="loc" onclick='setLocation("China");'>China</a>
-                    <a class="loc" onclick='setLocation("Christmas Island");'>Christmas Island</a>
-                    <a class="loc" onclick='setLocation("Cocos (Keeling) Islands");'>Cocos (Keeling) Islands</a>
-                    <a class="loc" onclick='setLocation("Colombia");'>Colombia</a>
-                    <a class="loc" onclick='setLocation("Comoros");'>Comoros</a>
-                    <a class="loc" onclick='setLocation("Congo");'>Congo</a>
-                    <a class="loc" onclick='setLocation("Congo, Democratic Republic of the Congo");'>Congo, Democratic
-                        Republic of the Congo</a>
-                    <a class="loc" onclick='setLocation("Cook Islands");'>Cook Islands</a>
-                    <a class="loc" onclick='setLocation("Costa Rica");'>Costa Rica</a>
-                    <a class="loc" onclick="setLocation('Cote D\'Ivoire');">Cote D'Ivoire</a>
-                    <a class="loc" onclick="setLocation('Croatia');">Croatia</a>
-                    <a class="loc" onclick="setLocation('Cuba');">Cuba</a>
-                    <a class="loc" onclick="setLocation('Curacao');">Curacao</a>
-                    <a class="loc" onclick="setLocation('Cyprus');">Cyprus</a>
-                    <a class="loc" onclick="setLocation('Czech Republic');">Czech Republic</a>
-                    <a class="loc" onclick="setLocation('Denmark');">Denmark</a>
-                    <a class="loc" onclick="setLocation('Djibouti');">Djibouti</a>
-                    <a class="loc" onclick="setLocation('Dominica');">Dominica</a>
-                    <a class="loc" onclick="setLocation('Dominican Republic');">Dominican Republic</a>
-                    <a class="loc" onclick="setLocation('Ecuador');">Ecuador</a>
-                    <a class="loc" onclick="setLocation('Egypt');">Egypt</a>
-                    <a class="loc" onclick="setLocation('El Salvador');">El Salvador</a>
-                    <a class="loc" onclick="setLocation('Equatorial Guinea');">Equatorial Guinea</a>
-                    <a class="loc" onclick="setLocation('Eritrea');">Eritrea</a>
-                    <a class="loc" onclick="setLocation('Estonia');">Estonia</a>
-                    <a class="loc" onclick="setLocation('Ethiopia');">Ethiopia</a>
-                    <a class="loc" onclick="setLocation('Falkland Islands (Malvinas)');">Falkland Islands (Malvinas)</a>
-                    <a class="loc" onclick="setLocation('Faroe Islands');">Faroe Islands</a>
-                    <a class="loc" onclick="setLocation('Fiji');">Fiji</a>
-                    <a class="loc" onclick="setLocation('Finland');">Finland</a>
-                    <a class="loc" onclick="setLocation('France');">France</a>
-                    <a class="loc" onclick="setLocation('French Guiana');">French Guiana</a>
-                    <a class="loc" onclick="setLocation('French Polynesia');">French Polynesia</a>
-                    <a class="loc" onclick="setLocation('French Southern Territories');">French Southern Territories</a>
-                    <a class="loc" onclick="setLocation('Gabon');">Gabon</a>
-                    <a class="loc" onclick="setLocation('Gambia');">Gambia</a>
-                    <a class="loc" onclick="setLocation('Georgia');">Georgia</a>
-                    <a class="loc" onclick="setLocation('Germany');">Germany</a>
-                    <a class="loc" onclick="setLocation('Ghana');">Ghana</a>
-                    <a class="loc" onclick="setLocation('Gibraltar');">Gibraltar</a>
-                    <a class="loc" onclick="setLocation('Greece');">Greece</a>
-                    <a class="loc" onclick="setLocation('Greenland');">Greenland</a>
-                    <a class="loc" onclick="setLocation('Grenada');">Grenada</a>
-                    <a class="loc" onclick="setLocation('Guadeloupe');">Guadeloupe</a>
-                    <a class="loc" onclick="setLocation('Guam');">Guam</a>
-                    <a class="loc" onclick="setLocation('Guatemala');">Guatemala</a>
-                    <a class="loc" onclick="setLocation('Guernsey');">Guernsey</a>
-                    <a class="loc" onclick="setLocation('Guinea');">Guinea</a>
-                    <a class="loc" onclick="setLocation('Guinea-Bissau');">Guinea-Bissau</a>
-                    <a class="loc" onclick="setLocation('Guyana');">Guyana</a>
-                    <a class="loc" onclick="setLocation('Haiti');">Haiti</a>
-                    <a class="loc" onclick="setLocation('Heard Island and Mcdonald Islands');">Heard Island and Mcdonald
-                        Islands</a>
-                    <a class="loc" onclick="setLocation('Holy See (Vatican City State)');">Holy See (Vatican City
-                        State)</a>
-                    <a class="loc" onclick="setLocation('Honduras');">Honduras</a>
-                    <a class="loc" onclick="setLocation('Hong Kong');">Hong Kong</a>
-                    <a class="loc" onclick="setLocation('Hungary');">Hungary</a>
-                    <a class="loc" onclick="setLocation('Iceland');">Iceland</a>
-                    <a class="loc" onclick="setLocation('India');">India</a>
-                    <a class="loc" onclick="setLocation('Indonesia');">Indonesia</a>
-                    <a class="loc" onclick="setLocation('Iran, Islamic Republic of');">Iran, Islamic Republic of</a>
-                    <a class="loc" onclick="setLocation('Iraq');">Iraq</a>
-                    <a class="loc" onclick="setLocation('Ireland');">Ireland</a>
-                    <a class="loc" onclick="setLocation('Isle of Man');">Isle of Man</a>
-                    <a class="loc" onclick="setLocation('Israel');">Israel</a>
-                    <a class="loc" onclick="setLocation('Italy');">Italy</a>
-                    <a class="loc" onclick="setLocation('Jamaica');">Jamaica</a>
-                    <a class="loc" onclick="setLocation('Japan');">Japan</a>
-                    <a class="loc" onclick="setLocation('Jersey');">Jersey</a>
-                    <a class="loc" onclick="setLocation('Jordan');">Jordan</a>
-                    <a class="loc" onclick="setLocation('Kazakhstan');">Kazakhstan</a>
-                    <a class="loc" onclick="setLocation('Kenya');">Kenya</a>
-                    <a class="loc" onclick="setLocation('Kiribati');">Kiribati</a>
-                    <a class="loc" onclick="setLocation('Korea, Democratic People\'s Republic of');">Korea, Democratic
-                        People's Republic of</a>
-                    <a class="loc" onclick="setLocation('Korea, Republic of');">Korea, Republic of</a>
-                    <a class="loc" onclick="setLocation('Kosovo');">Kosovo</a>
-                    <a class="loc" onclick="setLocation('Kuwait');">Kuwait</a>
-                    <a class="loc" onclick="setLocation('Kyrgyzstan');">Kyrgyzstan</a>
-                    <a class="loc" onclick="setLocation('Lao People\'s Democratic Republic');">Lao People's Democratic
-                        Republic</a>
-                    <a class="loc" onclick="setLocation('Latvia');">Latvia</a>
-                    <a class="loc" onclick="setLocation('Lebanon');">Lebanon</a>
-                    <a class="loc" onclick="setLocation('Lesotho');">Lesotho</a>
-                    <a class="loc" onclick="setLocation('Liberia');">Liberia</a>
-                    <a class="loc" onclick="setLocation('Libyan Arab Jamahiriya');">Libyan Arab Jamahiriya</a>
-                    <a class="loc" onclick="setLocation('Liechtenstein');">Liechtenstein</a>
-                    <a class="loc" onclick="setLocation('Lithuania');">Lithuania</a>
-                    <a class="loc" onclick="setLocation('Luxembourg');">Luxembourg</a>
-                    <a class="loc" onclick="setLocation('Macao');">Macao</a>
-                    <a class="loc" onclick="setLocation('Macedonia, the Former Yugoslav Republic of');">Macedonia, the
-                        Former Yugoslav Republic of</a>
-                    <a class="loc" onclick="setLocation('Madagascar');">Madagascar</a>
-                    <a class="loc" onclick="setLocation('Malawi');">Malawi</a>
-                    <a class="loc" onclick="setLocation('Malaysia');">Malaysia</a>
-                    <a class="loc" onclick="setLocation('Maldives');">Maldives</a>
-                    <a class="loc" onclick="setLocation('Mali');">Mali</a>
-                    <a class="loc" onclick="setLocation('Malta');">Malta</a>
-                    <a class="loc" onclick="setLocation('Marshall Islands');">Marshall Islands</a>
-                    <a class="loc" onclick="setLocation('Martinique');">Martinique</a>
-                    <a class="loc" onclick="setLocation('Mauritania');">Mauritania</a>
-                    <a class="loc" onclick="setLocation('Mauritius');">Mauritius</a>
-                    <a class="loc" onclick="setLocation('Mayotte');">Mayotte</a>
-                    <a class="loc" onclick="setLocation('Mexico');">Mexico</a>
-                    <a class="loc" onclick="setLocation('Micronesia, Federated States of');">Micronesia, Federated
-                        States of</a>
-                    <a class="loc" onclick="setLocation('Moldova, Republic of');">Moldova, Republic of</a>
-                    <a class="loc" onclick="setLocation('Monaco');">Monaco</a>
-                    <a class="loc" onclick="setLocation('Mongolia');">Mongolia</a>
-                    <a class="loc" onclick="setLocation('Montenegro');">Montenegro</a>
-                    <a class="loc" onclick="setLocation('Montserrat');">Montserrat</a>
-                    <a class="loc" onclick="setLocation('Morocco');">Morocco</a>
-                    <a class="loc" onclick="setLocation('Mozambique');">Mozambique</a>
-                    <a class="loc" onclick="setLocation('Myanmar');">Myanmar</a>
-                    <a class="loc" onclick="setLocation('Namibia');">Namibia</a>
-                    <a class="loc" onclick="setLocation('Nauru');">Nauru</a>
-                    <a class="loc" onclick="setLocation('Nepal');">Nepal</a>
-                    <a class="loc" onclick="setLocation('Netherlands');">Netherlands</a>
-                    <a class="loc" onclick="setLocation('Netherlands Antilles');">Netherlands Antilles</a>
-                    <a class="loc" onclick="setLocation('New Caledonia');">New Caledonia</a>
-                    <a class="loc" onclick="setLocation('New Zealand');">New Zealand</a>
-                    <a class="loc" onclick="setLocation('Nicaragua');">Nicaragua</a>
-                    <a class="loc" onclick="setLocation('Niger');">Niger</a>
-                    <a class="loc" onclick="setLocation('Nigeria');">Nigeria</a>
-                    <a class="loc" onclick="setLocation('Niue');">Niue</a>
-                    <a class="loc" onclick="setLocation('Norfolk Island');">Norfolk Island</a>
-                    <a class="loc" onclick="setLocation('Northern Mariana Islands');">Northern Mariana Islands</a>
-                    <a class="loc" onclick="setLocation('Norway');">Norway</a>
-                    <a class="loc" onclick="setLocation('Oman');">Oman</a>
-                    <a class="loc" onclick="setLocation('Pakistan');">Pakistan</a>
-                    <a class="loc" onclick="setLocation('Palau');">Palau</a>
-                    <a class="loc" onclick="setLocation('Palestinian Territory, Occupied');">Palestinian Territory,
-                        Occupied</a>
-                    <a class="loc" onclick="setLocation('Panama');">Panama</a>
-                    <a class="loc" onclick="setLocation('Papua New Guinea');">Papua New Guinea</a>
-                    <a class="loc" onclick="setLocation('Paraguay');">Paraguay</a>
-                    <a class="loc" onclick="setLocation('Peru');">Peru</a>
-                    <a class="loc" onclick="setLocation('Philippines');">Philippines</a>
-                    <a class="loc" onclick="setLocation('Pitcairn');">Pitcairn</a>
-                    <a class="loc" onclick="setLocation('Poland');">Poland</a>
-                    <a class="loc" onclick="setLocation('Portugal');">Portugal</a>
-                    <a class="loc" onclick="setLocation('Puerto Rico');">Puerto Rico</a>
-                    <a class="loc" onclick="setLocation('Qatar');">Qatar</a>
-                    <a class="loc" onclick="setLocation('Reunion');">Reunion</a>
-                    <a class="loc" onclick="setLocation('Romania');">Romania</a>
-                    <a class="loc" onclick="setLocation('Russian Federation');">Russian Federation</a>
-                    <a class="loc" onclick="setLocation('Rwanda');">Rwanda</a>
-                    <a class="loc" onclick="setLocation('Saint Barthelemy');">Saint Barthelemy</a>
-                    <a class="loc" onclick="setLocation('Saint Helena');">Saint Helena</a>
-                    <a class="loc" onclick="setLocation('Saint Kitts and Nevis');">Saint Kitts and Nevis</a>
-                    <a class="loc" onclick="setLocation('Saint Lucia');">Saint Lucia</a>
-                    <a class="loc" onclick="setLocation('Saint Martin');">Saint Martin</a>
-                    <a class="loc" onclick="setLocation('Saint Pierre and Miquelon');">Saint Pierre and Miquelon</a>
-                    <a class="loc" onclick="setLocation('Saint Vincent and the Grenadines');">Saint Vincent and the
-                        Grenadines</a>
-                    <a class="loc" onclick="setLocation('Samoa');">Samoa</a>
-                    <a class="loc" onclick="setLocation('San Marino');">San Marino</a>
-                    <a class="loc" onclick="setLocation('Sao Tome and Principe');">Sao Tome and Principe</a>
-                    <a class="loc" onclick="setLocation('Saudi Arabia');">Saudi Arabia</a>
-                    <a class="loc" onclick="setLocation('Senegal');">Senegal</a>
-                    <a class="loc" onclick="setLocation('Serbia');">Serbia</a>
-                    <a class="loc" onclick="setLocation('Serbia and Montenegro');">Serbia and Montenegro</a>
-                    <a class="loc" onclick="setLocation('Seychelles');">Seychelles</a>
-                    <a class="loc" onclick="setLocation('Sierra Leone');">Sierra Leone</a>
-                    <a class="loc" onclick="setLocation('Singapore');">Singapore</a>
-                    <a class="loc" onclick="setLocation('Sint Maarten');">Sint Maarten</a>
-                    <a class="loc" onclick="setLocation('Slovakia');">Slovakia</a>
-                    <a class="loc" onclick="setLocation('Slovenia');">Slovenia</a>
-                    <a class="loc" onclick="setLocation('Solomon Islands');">Solomon Islands</a>
-                    <a class="loc" onclick="setLocation('Somalia');">Somalia</a>
-                    <a class="loc" onclick="setLocation('South Africa');">South Africa</a>
-                    <a class="loc" onclick="setLocation('South Georgia and the South Sandwich Islands');">South Georgia
-                        and the South Sandwich Islands</a>
-                    <a class="loc" onclick="setLocation('South Sudan');">South Sudan</a>
-                    <a class="loc" onclick="setLocation('Spain');">Spain</a>
-                    <a class="loc" onclick="setLocation('Sri Lanka');">Sri Lanka</a>
-                    <a class="loc" onclick="setLocation('Sudan');">Sudan</a>
-                    <a class="loc" onclick="setLocation('Suriname');">Suriname</a>
-                    <a class="loc" onclick="setLocation('Svalbard and Jan Mayen');">Svalbard and Jan Mayen</a>
-                    <a class="loc" onclick="setLocation('Swaziland');">Swaziland</a>
-                    <a class="loc" onclick="setLocation('Sweden');">Sweden</a>
-                    <a class="loc" onclick="setLocation('Switzerland');">Switzerland</a>
-                    <a class="loc" onclick="setLocation('Syrian Arab Republic');">Syrian Arab Republic</a>
-                    <a class="loc" onclick="setLocation('Taiwan, Province of China');">Taiwan, Province of China</a>
-                    <a class="loc" onclick="setLocation('Tajikistan');">Tajikistan</a>
-                    <a class="loc" onclick="setLocation('Tanzania, United Republic of');">Tanzania, United Republic
-                        of</a>
-                    <a class="loc" onclick="setLocation('Thailand');">Thailand</a>
-                    <a class="loc" onclick="setLocation('Timor-Leste');">Timor-Leste</a>
-                    <a class="loc" onclick="setLocation('Togo');">Togo</a>
-                    <a class="loc" onclick="setLocation('Tokelau');">Tokelau</a>
-                    <a class="loc" onclick="setLocation('Tonga');">Tonga</a>
-                    <a class="loc" onclick="setLocation('Trinidad and Tobago');">Trinidad and Tobago</a>
-                    <a class="loc" onclick="setLocation('Tunisia');">Tunisia</a>
-                    <a class="loc" onclick="setLocation('Turkey');">Turkey</a>
-                    <a class="loc" onclick="setLocation('Turkmenistan');">Turkmenistan</a>
-                    <a class="loc" onclick="setLocation('Turks and Caicos Islands');">Turks and Caicos Islands</a>
-                    <a class="loc" onclick="setLocation('Tuvalu');">Tuvalu</a>
-                    <a class="loc" onclick="setLocation('Uganda');">Uganda</a>
-                    <a class="loc" onclick="setLocation('Ukraine');">Ukraine</a>
-                    <a class="loc" onclick="setLocation('Ukraine');">United Arab Emirates</a>
-                    <a class="loc" onclick="setLocation('Uganda');">United Kingdom</a>
-                    <a class="loc" onclick="setLocation('Uganda');">United States</a>
-                    <a class="loc" onclick="setLocation('United States Minor Outlying Islands');">United States Minor
-                        Outlying Islands</a>
-                    <a class="loc" onclick="setLocation('Uruguay');">Uruguay</a>
-                    <a class="loc" onclick="setLocation('Uzbekistan');">Uzbekistan</a>
-                    <a class="loc" onclick="setLocation('Vanuatu');">Vanuatu</a>
-                    <a class="loc" onclick="setLocation('Venezuela');">Venezuela</a>
-                    <a class="loc" onclick="setLocation('Viet Nam');">Viet Nam</a>
-                    <a class="loc" onclick="setLocation('Virgin Islands, British');">Virgin Islands, British</a>
-                    <a class="loc" onclick="setLocation('Virgin Islands, U.s.');">Virgin Islands, U.s.</a>
-                    <a class="loc" onclick="setLocation('Wallis and Futuna');">Wallis and Futuna</a>
-                    <a class="loc" onclick="setLocation('Western Sahara');">Western Sahara</a>
-                    <a class="loc" onclick="setLocation('Yemen');">Yemen</a>
-                    <a class="loc" onclick="setLocation('Zambia');">Zambia</a>
-                    <a class="loc" onclick="setLocation('Zimbabwe');">Zimbabwe</a>
-                </div>
-            </form>
             <div class="row">
                 <div class="column" id="stuckwords">
+<<<<<<< Updated upstream
                     <h5>Basic Screening:</h5>
                     <input class="box" type="checkbox" id="Project-based learning" name="project">
                     <label for="Project-based learning">Project-based learning</label><br />
@@ -330,6 +57,8 @@
                 --->
                 </div>
                 <div class="column" id="newwords">
+=======
+>>>>>>> Stashed changes
                     <h5>New Screening:</h5>
                     <form>
                         <input type="text" name="keywords" id="keywordInput" placeholder="Add new key words" />
@@ -341,7 +70,313 @@
                         <button hidden onclick="clearList();" id="clearinglist">Clear</button>
                     </div>
                 </div>
+
+                <div class="column" id="newwords">
+                    <form>
+                        <h5>Country / Region:</h5>
+                        <input type="text" name="Country Code" id="location" placeholder="Search for a location"
+                            onclick="showLocations();" onkeyup="filterFunction()" />
+                        <div id="myDropdown" class="dropdown-content">
+                            <a class="loc" onclick="setLocation('Afghanistan');">Afghanistan</a>
+                            <a class="loc" onclick="setLocation('Aland Islands');">Aland Islands</a>
+                            <a class="loc" onclick="setLocation('Albania');">Albania</a>
+                            <a class="loc" onclick="setLocation('Algeria');">Algeria</a>
+                            <a class="loc" onclick='setLocation("American Samoa");'>American Samoa</a>
+                            <a class="loc" onclick='setLocation("Andorra");'>Andorra</a>
+                            <a class="loc" onclick='setLocation("Angola");'>Angola</a>
+                            <a class="loc" onclick='setLocation("Anguilla");'>Anguilla</a>
+                            <a class="loc" onclick='setLocation("Antarctica");'>Antarctica</a>
+                            <a class="loc" onclick='setLocation("Antigua and Barbuda");'>Antigua and Barbuda</a>
+                            <a class="loc" onclick='setLocation("Argentina");'>Argentina</a>
+                            <a class="loc" onclick='setLocation("Armenia");'>Armenia</a>
+                            <a class="loc" onclick='setLocation("Aruba");'>Aruba</a>
+                            <a class="loc" onclick='setLocation("Australia");'>Australia</a>
+                            <a class="loc" onclick='setLocation("Austria");'>Austria</a>
+                            <a class="loc" onclick='setLocation("Azerbaijan");'>Azerbaijan</a>
+                            <a class="loc" onclick='setLocation("Bahamas");'>Bahamas</a>
+                            <a class="loc" onclick='setLocation("Bahrain");'>Bahrain</a>
+                            <a class="loc" onclick='setLocation("Bangladesh");'>Bangladesh</a>
+                            <a class="loc" onclick='setLocation("Barbados");'>Barbados</a>
+                            <a class="loc" onclick='setLocation("Belarus");'>Belarus</a>
+                            <a class="loc" onclick='setLocation("Belgium");'>Belgium</a>
+                            <a class="loc" onclick='setLocation("Belize");'>Belize</a>
+                            <a class="loc" onclick='setLocation("Benin");'>Benin</a>
+                            <a class="loc" onclick='setLocation("Bermuda");'>Bermuda</a>
+                            <a class="loc" onclick='setLocation("Bhutan");'>Bhutan</a>
+                            <a class="loc" onclick='setLocation("Bolivia");'>Bolivia</a>
+                            <a class="loc" onclick='setLocation("Bonaire, Sint Eustatius and Saba");'>Bonaire, Sint
+                                Eustatius and Saba</a>
+                            <a class="loc" onclick='setLocation("Bosnia and Herzegovina");'>Bosnia and Herzegovina</a>
+                            <a class="loc" onclick='setLocation("Botswana");'>Botswana</a>
+                            <a class="loc" onclick='setLocation("Bouvet Island");'>Bouvet Island</a>
+                            <a class="loc" onclick='setLocation("Brazil");'>Brazil</a>
+                            <a class="loc" onclick='setLocation("British Indian Ocean Territory");'>British Indian Ocean
+                                Territory</a>
+                            <a class="loc" onclick='setLocation("Brunei Darussalam");'>Brunei</a>
+                            <a class="loc" onclick='setLocation("Bulgaria");'>Bulgaria</a>
+                            <a class="loc" onclick='setLocation("Burkina Faso");'>Burkina Faso</a>
+                            <a class="loc" onclick='setLocation("Burundi");'>Burundi</a>
+                            <a class="loc" onclick='setLocation("Cambodia");'>Cambodia</a>
+                            <a class="loc" onclick='setLocation("Cameroon");'>Cameroon</a>
+                            <a class="loc" onclick='setLocation("Canada");'>Canada</a>
+                            <a class="loc" onclick='setLocation("Cape Verde");'>Cape Verde</a>
+                            <a class="loc" onclick='setLocation("Cayman Islands");'>Cayman Islands</a>
+                            <a class="loc" onclick='setLocation("Central African Republic");'>Central African
+                                Republic</a>
+                            <a class="loc" onclick='setLocation("Chad");'>Chad</a>
+                            <a class="loc" onclick='setLocation("Chile");'>Chile</a>
+                            <a class="loc" onclick='setLocation("China");'>China</a>
+                            <a class="loc" onclick='setLocation("Christmas Island");'>Christmas Island</a>
+                            <a class="loc" onclick='setLocation("Cocos (Keeling) Islands");'>Cocos (Keeling) Islands</a>
+                            <a class="loc" onclick='setLocation("Colombia");'>Colombia</a>
+                            <a class="loc" onclick='setLocation("Comoros");'>Comoros</a>
+                            <a class="loc" onclick='setLocation("Congo");'>Congo</a>
+                            <a class="loc" onclick='setLocation("Congo, Democratic Republic of the Congo");'>Democratic
+                                Republic of the Congo</a>
+                            <a class="loc" onclick='setLocation("Cook Islands");'>Cook Islands</a>
+                            <a class="loc" onclick='setLocation("Costa Rica");'>Costa Rica</a>
+                            <a class="loc" onclick="setLocation('Cote D\'Ivoire');">Cote D'Ivoire</a>
+                            <a class="loc" onclick="setLocation('Croatia');">Croatia</a>
+                            <a class="loc" onclick="setLocation('Cuba');">Cuba</a>
+                            <a class="loc" onclick="setLocation('Curacao');">Curacao</a>
+                            <a class="loc" onclick="setLocation('Cyprus');">Cyprus</a>
+                            <a class="loc" onclick="setLocation('Czech Republic');">Czech Republic</a>
+                            <a class="loc" onclick="setLocation('Denmark');">Denmark</a>
+                            <a class="loc" onclick="setLocation('Djibouti');">Djibouti</a>
+                            <a class="loc" onclick="setLocation('Dominica');">Dominica</a>
+                            <a class="loc" onclick="setLocation('Dominican Republic');">Dominican Republic</a>
+                            <a class="loc" onclick="setLocation('Ecuador');">Ecuador</a>
+                            <a class="loc" onclick="setLocation('Egypt');">Egypt</a>
+                            <a class="loc" onclick="setLocation('El Salvador');">El Salvador</a>
+                            <a class="loc" onclick="setLocation('Equatorial Guinea');">Equatorial Guinea</a>
+                            <a class="loc" onclick="setLocation('Eritrea');">Eritrea</a>
+                            <a class="loc" onclick="setLocation('Estonia');">Estonia</a>
+                            <a class="loc" onclick="setLocation('Ethiopia');">Ethiopia</a>
+                            <a class="loc" onclick="setLocation('Falkland Islands (Malvinas)');">Falkland Islands
+                                (Malvinas)</a>
+                            <a class="loc" onclick="setLocation('Faroe Islands');">Faroe Islands</a>
+                            <a class="loc" onclick="setLocation('Fiji');">Fiji</a>
+                            <a class="loc" onclick="setLocation('Finland');">Finland</a>
+                            <a class="loc" onclick="setLocation('France');">France</a>
+                            <a class="loc" onclick="setLocation('French Guiana');">French Guiana</a>
+                            <a class="loc" onclick="setLocation('French Polynesia');">French Polynesia</a>
+                            <a class="loc" onclick="setLocation('French Southern Territories');">French Southern
+                                Territories</a>
+                            <a class="loc" onclick="setLocation('Gabon');">Gabon</a>
+                            <a class="loc" onclick="setLocation('Gambia');">Gambia</a>
+                            <a class="loc" onclick="setLocation('Georgia');">Georgia</a>
+                            <a class="loc" onclick="setLocation('Germany');">Germany</a>
+                            <a class="loc" onclick="setLocation('Ghana');">Ghana</a>
+                            <a class="loc" onclick="setLocation('Gibraltar');">Gibraltar</a>
+                            <a class="loc" onclick="setLocation('Greece');">Greece</a>
+                            <a class="loc" onclick="setLocation('Greenland');">Greenland</a>
+                            <a class="loc" onclick="setLocation('Grenada');">Grenada</a>
+                            <a class="loc" onclick="setLocation('Guadeloupe');">Guadeloupe</a>
+                            <a class="loc" onclick="setLocation('Guam');">Guam</a>
+                            <a class="loc" onclick="setLocation('Guatemala');">Guatemala</a>
+                            <a class="loc" onclick="setLocation('Guernsey');">Guernsey</a>
+                            <a class="loc" onclick="setLocation('Guinea');">Guinea</a>
+                            <a class="loc" onclick="setLocation('Guinea-Bissau');">Guinea-Bissau</a>
+                            <a class="loc" onclick="setLocation('Guyana');">Guyana</a>
+                            <a class="loc" onclick="setLocation('Haiti');">Haiti</a>
+                            <a class="loc" onclick="setLocation('Heard Island and Mcdonald Islands');">Heard Island and
+                                Mcdonald Islands</a>
+                            <a class="loc" onclick="setLocation('Holy See (Vatican City State)');">Vatican City</a>
+                            <a class="loc" onclick="setLocation('Honduras');">Honduras</a>
+                            <a class="loc" onclick="setLocation('Hong Kong');">Hong Kong</a>
+                            <a class="loc" onclick="setLocation('Hungary');">Hungary</a>
+                            <a class="loc" onclick="setLocation('Iceland');">Iceland</a>
+                            <a class="loc" onclick="setLocation('India');">India</a>
+                            <a class="loc" onclick="setLocation('Indonesia');">Indonesia</a>
+                            <a class="loc" onclick="setLocation('Iran, Islamic Republic of');">Iran</a>
+                            <a class="loc" onclick="setLocation('Iraq');">Iraq</a>
+                            <a class="loc" onclick="setLocation('Ireland');">Ireland</a>
+                            <a class="loc" onclick="setLocation('Isle of Man');">Isle of Man</a>
+                            <a class="loc" onclick="setLocation('Israel');">Israel</a>
+                            <a class="loc" onclick="setLocation('Italy');">Italy</a>
+                            <a class="loc" onclick="setLocation('Jamaica');">Jamaica</a>
+                            <a class="loc" onclick="setLocation('Japan');">Japan</a>
+                            <a class="loc" onclick="setLocation('Jersey');">Jersey</a>
+                            <a class="loc" onclick="setLocation('Jordan');">Jordan</a>
+                            <a class="loc" onclick="setLocation('Kazakhstan');">Kazakhstan</a>
+                            <a class="loc" onclick="setLocation('Kenya');">Kenya</a>
+                            <a class="loc" onclick="setLocation('Kiribati');">Kiribati</a>
+                            <a class="loc" onclick="setLocation('Korea, Democratic People\'s Republic of');">North
+                                Korea</a>
+                            <a class="loc" onclick="setLocation('Korea, Republic of');">South Korea</a>
+                            <a class="loc" onclick="setLocation('Kosovo');">Kosovo</a>
+                            <a class="loc" onclick="setLocation('Kuwait');">Kuwait</a>
+                            <a class="loc" onclick="setLocation('Kyrgyzstan');">Kyrgyzstan</a>
+                            <a class="loc" onclick="setLocation('Lao People\'s Democratic Republic');">Laos</a>
+                            <a class="loc" onclick="setLocation('Latvia');">Latvia</a>
+                            <a class="loc" onclick="setLocation('Lebanon');">Lebanon</a>
+                            <a class="loc" onclick="setLocation('Lesotho');">Lesotho</a>
+                            <a class="loc" onclick="setLocation('Liberia');">Liberia</a>
+                            <a class="loc" onclick="setLocation('Libyan Arab Jamahiriya');">Libya</a>
+                            <a class="loc" onclick="setLocation('Liechtenstein');">Liechtenstein</a>
+                            <a class="loc" onclick="setLocation('Lithuania');">Lithuania</a>
+                            <a class="loc" onclick="setLocation('Luxembourg');">Luxembourg</a>
+                            <a class="loc" onclick="setLocation('Macao');">Macao</a>
+                            <a class="loc" onclick="setLocation('Macedonia, the Former Yugoslav Republic of');">North
+                                Macedonia</a>
+                            <a class="loc" onclick="setLocation('Madagascar');">Madagascar</a>
+                            <a class="loc" onclick="setLocation('Malawi');">Malawi</a>
+                            <a class="loc" onclick="setLocation('Malaysia');">Malaysia</a>
+                            <a class="loc" onclick="setLocation('Maldives');">Maldives</a>
+                            <a class="loc" onclick="setLocation('Mali');">Mali</a>
+                            <a class="loc" onclick="setLocation('Malta');">Malta</a>
+                            <a class="loc" onclick="setLocation('Marshall Islands');">Marshall Islands</a>
+                            <a class="loc" onclick="setLocation('Martinique');">Martinique</a>
+                            <a class="loc" onclick="setLocation('Mauritania');">Mauritania</a>
+                            <a class="loc" onclick="setLocation('Mauritius');">Mauritius</a>
+                            <a class="loc" onclick="setLocation('Mayotte');">Mayotte</a>
+                            <a class="loc" onclick="setLocation('Mexico');">Mexico</a>
+                            <a class="loc" onclick="setLocation('Micronesia, Federated States of');">Federated States of
+                                Micronesia</a>
+                            <a class="loc" onclick="setLocation('Moldova, Republic of');">Moldova</a>
+                            <a class="loc" onclick="setLocation('Monaco');">Monaco</a>
+                            <a class="loc" onclick="setLocation('Mongolia');">Mongolia</a>
+                            <a class="loc" onclick="setLocation('Montenegro');">Montenegro</a>
+                            <a class="loc" onclick="setLocation('Montserrat');">Montserrat</a>
+                            <a class="loc" onclick="setLocation('Morocco');">Morocco</a>
+                            <a class="loc" onclick="setLocation('Mozambique');">Mozambique</a>
+                            <a class="loc" onclick="setLocation('Myanmar');">Myanmar</a>
+                            <a class="loc" onclick="setLocation('Namibia');">Namibia</a>
+                            <a class="loc" onclick="setLocation('Nauru');">Nauru</a>
+                            <a class="loc" onclick="setLocation('Nepal');">Nepal</a>
+                            <a class="loc" onclick="setLocation('Netherlands');">Netherlands</a>
+                            <a class="loc" onclick="setLocation('Netherlands Antilles');">Netherlands Antilles</a>
+                            <a class="loc" onclick="setLocation('New Caledonia');">New Caledonia</a>
+                            <a class="loc" onclick="setLocation('New Zealand');">New Zealand</a>
+                            <a class="loc" onclick="setLocation('Nicaragua');">Nicaragua</a>
+                            <a class="loc" onclick="setLocation('Niger');">Niger</a>
+                            <a class="loc" onclick="setLocation('Nigeria');">Nigeria</a>
+                            <a class="loc" onclick="setLocation('Niue');">Niue</a>
+                            <a class="loc" onclick="setLocation('Norfolk Island');">Norfolk Island</a>
+                            <a class="loc" onclick="setLocation('Northern Mariana Islands');">Northern Mariana
+                                Islands</a>
+                            <a class="loc" onclick="setLocation('Norway');">Norway</a>
+                            <a class="loc" onclick="setLocation('Oman');">Oman</a>
+                            <a class="loc" onclick="setLocation('Pakistan');">Pakistan</a>
+                            <a class="loc" onclick="setLocation('Palau');">Palau</a>
+                            <a class="loc" onclick="setLocation('Palestinian Territory, Occupied');">Palestinian
+                                Territory, Occupied</a>
+                            <a class="loc" onclick="setLocation('Panama');">Panama</a>
+                            <a class="loc" onclick="setLocation('Papua New Guinea');">Papua New Guinea</a>
+                            <a class="loc" onclick="setLocation('Paraguay');">Paraguay</a>
+                            <a class="loc" onclick="setLocation('Peru');">Peru</a>
+                            <a class="loc" onclick="setLocation('Philippines');">Philippines</a>
+                            <a class="loc" onclick="setLocation('Pitcairn');">Pitcairn</a>
+                            <a class="loc" onclick="setLocation('Poland');">Poland</a>
+                            <a class="loc" onclick="setLocation('Portugal');">Portugal</a>
+                            <a class="loc" onclick="setLocation('Puerto Rico');">Puerto Rico</a>
+                            <a class="loc" onclick="setLocation('Qatar');">Qatar</a>
+                            <a class="loc" onclick="setLocation('Reunion');">Reunion</a>
+                            <a class="loc" onclick="setLocation('Romania');">Romania</a>
+                            <a class="loc" onclick="setLocation('Russian Federation');">Russian Federation</a>
+                            <a class="loc" onclick="setLocation('Rwanda');">Rwanda</a>
+                            <a class="loc" onclick="setLocation('Saint Barthelemy');">Saint Barthelemy</a>
+                            <a class="loc" onclick="setLocation('Saint Helena');">Saint Helena</a>
+                            <a class="loc" onclick="setLocation('Saint Kitts and Nevis');">Saint Kitts and Nevis</a>
+                            <a class="loc" onclick="setLocation('Saint Lucia');">Saint Lucia</a>
+                            <a class="loc" onclick="setLocation('Saint Martin');">Saint Martin</a>
+                            <a class="loc" onclick="setLocation('Saint Pierre and Miquelon');">Saint Pierre and
+                                Miquelon</a>
+                            <a class="loc" onclick="setLocation('Saint Vincent and the Grenadines');">Saint Vincent and
+                                the Grenadines</a>
+                            <a class="loc" onclick="setLocation('Samoa');">Samoa</a>
+                            <a class="loc" onclick="setLocation('San Marino');">San Marino</a>
+                            <a class="loc" onclick="setLocation('Sao Tome and Principe');">Sao Tome and Principe</a>
+                            <a class="loc" onclick="setLocation('Saudi Arabia');">Saudi Arabia</a>
+                            <a class="loc" onclick="setLocation('Senegal');">Senegal</a>
+                            <a class="loc" onclick="setLocation('Serbia');">Serbia</a>
+                            <a class="loc" onclick="setLocation('Serbia and Montenegro');">Serbia and Montenegro</a>
+                            <a class="loc" onclick="setLocation('Seychelles');">Seychelles</a>
+                            <a class="loc" onclick="setLocation('Sierra Leone');">Sierra Leone</a>
+                            <a class="loc" onclick="setLocation('Singapore');">Singapore</a>
+                            <a class="loc" onclick="setLocation('Sint Maarten');">Sint Maarten</a>
+                            <a class="loc" onclick="setLocation('Slovakia');">Slovakia</a>
+                            <a class="loc" onclick="setLocation('Slovenia');">Slovenia</a>
+                            <a class="loc" onclick="setLocation('Solomon Islands');">Solomon Islands</a>
+                            <a class="loc" onclick="setLocation('Somalia');">Somalia</a>
+                            <a class="loc" onclick="setLocation('South Africa');">South Africa</a>
+                            <a class="loc" onclick="setLocation('South Georgia and the South Sandwich Islands');">South
+                                Georgia and the South Sandwich Islands</a>
+                            <a class="loc" onclick="setLocation('South Sudan');">South Sudan</a>
+                            <a class="loc" onclick="setLocation('Spain');">Spain</a>
+                            <a class="loc" onclick="setLocation('Sri Lanka');">Sri Lanka</a>
+                            <a class="loc" onclick="setLocation('Sudan');">Sudan</a>
+                            <a class="loc" onclick="setLocation('Suriname');">Suriname</a>
+                            <a class="loc" onclick="setLocation('Svalbard and Jan Mayen');">Svalbard and Jan Mayen</a>
+                            <a class="loc" onclick="setLocation('Swaziland');">Swaziland</a>
+                            <a class="loc" onclick="setLocation('Sweden');">Sweden</a>
+                            <a class="loc" onclick="setLocation('Switzerland');">Switzerland</a>
+                            <a class="loc" onclick="setLocation('Syrian Arab Republic');">Syria</a>
+                            <a class="loc" onclick="setLocation('Taiwan, Province of China');">Taiwan</a>
+                            <a class="loc" onclick="setLocation('Tajikistan');">Tajikistan</a>
+                            <a class="loc" onclick="setLocation('Tanzania, United Republic of');">Tanzania</a>
+                            <a class="loc" onclick="setLocation('Thailand');">Thailand</a>
+                            <a class="loc" onclick="setLocation('Timor-Leste');">Timor-Leste</a>
+                            <a class="loc" onclick="setLocation('Togo');">Togo</a>
+                            <a class="loc" onclick="setLocation('Tokelau');">Tokelau</a>
+                            <a class="loc" onclick="setLocation('Tonga');">Tonga</a>
+                            <a class="loc" onclick="setLocation('Trinidad and Tobago');">Trinidad and Tobago</a>
+                            <a class="loc" onclick="setLocation('Tunisia');">Tunisia</a>
+                            <a class="loc" onclick="setLocation('Turkey');">Turkey</a>
+                            <a class="loc" onclick="setLocation('Turkmenistan');">Turkmenistan</a>
+                            <a class="loc" onclick="setLocation('Turks and Caicos Islands');">Turks and Caicos
+                                Islands</a>
+                            <a class="loc" onclick="setLocation('Tuvalu');">Tuvalu</a>
+                            <a class="loc" onclick="setLocation('Uganda');">Uganda</a>
+                            <a class="loc" onclick="setLocation('Ukraine');">Ukraine</a>
+                            <a class="loc" onclick="setLocation('Ukraine');">United Arab Emirates</a>
+                            <a class="loc" onclick="setLocation('Uganda');">United Kingdom</a>
+                            <a class="loc" onclick="setLocation('Uganda');">United States</a>
+                            <a class="loc" onclick="setLocation('United States Minor Outlying Islands');">U.S. Minor
+                                Outlying Islands</a>
+                            <a class="loc" onclick="setLocation('Uruguay');">Uruguay</a>
+                            <a class="loc" onclick="setLocation('Uzbekistan');">Uzbekistan</a>
+                            <a class="loc" onclick="setLocation('Vanuatu');">Vanuatu</a>
+                            <a class="loc" onclick="setLocation('Venezuela');">Venezuela</a>
+                            <a class="loc" onclick="setLocation('Viet Nam');">Viet Nam</a>
+                            <a class="loc" onclick="setLocation('Virgin Islands, British');">British Virgin Islands</a>
+                            <a class="loc" onclick="setLocation('Virgin Islands, U.s.');">U.S. Virgin Islands</a>
+                            <a class="loc" onclick="setLocation('Wallis and Futuna');">Wallis and Futuna</a>
+                            <a class="loc" onclick="setLocation('Western Sahara');">Western Sahara</a>
+                            <a class="loc" onclick="setLocation('Yemen');">Yemen</a>
+                            <a class="loc" onclick="setLocation('Zambia');">Zambia</a>
+                            <a class="loc" onclick="setLocation('Zimbabwe');">Zimbabwe</a>
+                        </div>
+                    </form>
+                </div>
             </div>
+            <h5>Basic Screening:</h5>
+            <input class="box" type="checkbox" id="Project-based learning" name="project">
+            <label for="Project-based learning">Project-based learning</label>
+            <!-- <input class="box" type="checkbox" id="Creativity" name="creative">
+            <label for="Creativity">Creativity</label><br />
+            <input class="box" type="checkbox" id="Collaboration" name="collab">
+            <label for="Collaboration">Collaboration</label>
+            <input class="box" type="checkbox" id="Problem-solving" name="problem">
+            <label for="Problem-solving">Problem-solving</label><br />
+            <input class="box" type="checkbox" id="Scientific thinking" name="science">
+            <label for="Scientific thinking">Scientific thinking</label>
+            <input class="box" type="checkbox" id="Critical thinking" name="critical">
+            <label for="Critical thinking">Critical thinking</label><br />
+            <input class="box" type="checkbox" id="Design" name="design">
+            <label for="Design">Design</label>
+            <input class="box" type="checkbox" id="Innovation" name="innovation">
+            <label for="Innovation">Innovation</label><br /> -->
+            <input class="box" type="checkbox" id="Real World Learning" name="realWorld">
+            <label for="Real World Learning">Real World Learning</label>
+            <!-- <input class="box" type="checkbox" id="Leadership" name="leader">
+            <label for="leader">Leadership</label><br />
+            <input class="box" type="checkbox" id="Life-long learning" name="life">
+            <label for="Life-long learning">Life-long learning</label>
+            <input class="box" type="checkbox" id="Soft skills" name="soft">
+            <label for="Soft skills">Soft skills</label><br />
+            <input class="box" type="checkbox" id="21st century skills" name="21">
+            <label for="21st century skills">21st century skills</label> -->
         </div>
         <div class="large-column" id="outputs">
             <div class="buttons" id="buttons">
@@ -364,7 +399,7 @@
             console.log("in hndlr");
             var list = document.getElementById("results");
             if (response != null && response.items != null) {
-                document.body.style.background = "linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 120px, rgb(224, 195, 173) 100vh, rgba(222, 133, 65, 1) 100%)";
+                document.body.style.background = "linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 120px, rgb(224, 195, 173) 100vh, rgba(222, 133, 65, 1) 2000px)";
 
                 for (var i = 0; i < Object.keys(response.items).length; i++) {
                     // console.log(i);
@@ -389,7 +424,7 @@
                     document.getElementById("lessRes").style = "display: inline-block;";
                 }
                 document.getElementById("pageNum").hidden = false;
-                    document.getElementById("pageNum").style = "display: inline-block;";
+                document.getElementById("pageNum").style = "display: inline-block;";
             }
             else {
                 var res = document.createElement("div");

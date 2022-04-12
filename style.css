@@ -9,15 +9,15 @@ header {
 
 body {
     background: rgb(255, 255, 255);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 120px, rgb(224, 195, 173) 100vh);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 120px, rgb(224, 195, 173) 100vh, rgba(222, 133, 65, 1) 2000px);
     height: 100vh;
 }
 
-.logolink{
+.logolink {
     text-decoration: none;
 }
 
-footer{
+footer {
     height: 40px;
 }
 
@@ -50,7 +50,7 @@ li {
     margin-bottom: 0px;
 }
 
-.titles{
+.titles {
     display: inline-block;
     vertical-align: middle;
 }
@@ -65,24 +65,24 @@ h1 {
     font-size: 42px;
 }
 
-h2{
+h2 {
     font-family: Noto Sans, sans-serif;
     line-height: 14px;
     vertical-align: middle;
     color: rgba(103, 56, 48, 1);
     font-weight: bold;
-    font-size: 24px;
-    margin-left:5px;
+    font-size: 42px;
+    margin-left: 5px;
 }
 
-h3{
+h3 {
     font-family: Noto Sans, sans-serif;
     line-height: 14px;
     vertical-align: middle;
     color: rgba(103, 56, 48, 1);
     font-weight: bold;
-    font-size: 20px;
-    margin-left:5px;
+    font-size: 36px;
+    margin-left: 5px;
 }
 
 h4 {
@@ -98,7 +98,7 @@ h5 {
     line-height: 14px;
     /* color: rgba(103, 56, 48, 1); */
     font-weight: bold;
-    font-size:18px;
+    font-size: 18px;
 
 }
 
@@ -116,23 +116,41 @@ form {
     /* font-weight: bold; */
 }
 
-input{
-    /* color: rgba(103, 56, 48, 1); */
+input[type="checkbox"]:not(:checked),
+input[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999%;
 }
 
-.box {
-    line-height: 14px;
-    margin-top: 12px;
-    /* font-weight: bold; */
+input[type="checkbox"]+label {
+    display: inline-block;
+    padding: 10px;
+    /* margin-right: 10px; */
+    cursor: pointer;
+    border: 2px solid rgba(103, 56, 48, 1);
+    color: black;
+    background-color: white;
+    margin-bottom: 10px;
+    width: 40%;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
 }
 
-.small-column{
+input[type="checkbox"]:checked+label {
+    border: 2px solid rgba(103, 56, 48, 1);
+    color: black;
+    background-color: rgba(217, 181, 154, 1);
+}
+
+.small-column {
     float: left;
     width: 30%;
     height: 100%;
 }
 
-.large-column{
+.large-column {
     float: left;
     height: 100%;
     padding-left: 30px;
@@ -142,7 +160,7 @@ input{
 .column {
     float: left;
     width: 50%;
-    height: 100%;
+    height: fit-content;
 }
 
 .row:after {
@@ -166,7 +184,7 @@ a {
     /* color: rgba(103, 56, 48, 1); */
 }
 
-a.loc{
+a.loc {
     color: black;
 }
 
@@ -205,13 +223,14 @@ button {
     font-family: Noto Sans, sans-serif;
     /* color: rgba(103, 56, 48, 1); */
     line-height: 14px;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(217,181,154,1) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(217, 181, 154, 1) 100%);
     min-height: fit-content;
     /* height: 100px; */
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 4px;
+    margin-top: -1px;
 }
 
 #content {
@@ -235,13 +254,14 @@ button {
     border: 1px solid #ddd;
     z-index: 1;
     max-height: 500px;
-    overflow: auto;    
+    overflow: auto;
 }
 
-p.resTitle{
+p.resTitle {
     margin-top: 0px;
     margin-bottom: 20px;
 }
+
 /*
 a.resLink{
     margin-bottom: 11px;
@@ -259,7 +279,7 @@ a.resLink{
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: rgba(217,181,154,1)
+    background-color: rgba(217, 181, 154, 1);
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
@@ -267,19 +287,19 @@ a.resLink{
     display: block;
 }
 
-#location{
-    width: 100%;
+#location {
+    width: 90%;
 }
 
-#keywordInput{
-    width: 100%;
+#keywordInput {
+    width: 90%;
 }
 
-#pages{
+#pages {
     margin-bottom: 10px;
 }
 
-#pageNum{
+#pageNum {
     margin-left: 5px;
     margin-right: 25px;
     font-weight: bold;
