@@ -348,7 +348,7 @@ function startSearch() {
 
     console.log(sessionStorage.getItem("search"));
     var url = "https://customsearch.googleapis.com/customsearch/v1?key=" + key + "&cx=" + cx + "&q=" + q + "&cr=" + location + "&exactTerms="
-        + exactTerms + "&orTerms=" + orTerms + "&gl=" + gl + "&start=" +sessionStorage.getItem("search") + "&hq=" + hq + "&callback=hndlr";
+        + exactTerms + "&orTerms=" + orTerms + "&gl=" + gl + "&start=" + sessionStorage.getItem("search") + "&hq=" + hq + "&callback=hndlr";
 
     console.log(url);
     var apiLink = document.createElement("script")
