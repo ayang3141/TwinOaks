@@ -124,14 +124,16 @@ input[type="checkbox"]:checked {
 
 input[type="checkbox"]+label {
     display: inline-block;
-    padding: 10px;
-    /* margin-right: 10px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 1%;
+    margin-left: 1%;
     cursor: pointer;
     border: 2px solid rgba(103, 56, 48, 1);
     color: black;
     background-color: white;
-    margin-bottom: 10px;
-    width: 40%;
+    /* margin-bottom: 10px; */
+    width: 46%;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -153,7 +155,7 @@ input[type="checkbox"]:checked+label {
 .large-column {
     float: left;
     height: 100%;
-    padding-left: 30px;
+    margin-left: 3%;
     width: 67%;
 }
 
@@ -201,6 +203,7 @@ button {
     border-color: rgba(103, 56, 48, 1);
     /* font-weight: bold; */
     border-style: solid;
+    cursor: pointer;
 }
 
 .smalltextbox {
@@ -250,16 +253,17 @@ button {
     display: none;
     position: absolute;
     background-color: #f6f6f6;
-    min-width: 230px;
+    min-width: 150px;
     border: 1px solid #ddd;
     z-index: 1;
-    max-height: 500px;
+    max-height: 400px;
     overflow: auto;
 }
 
 p.resTitle {
     margin-top: 0px;
     margin-bottom: 20px;
+    font-weight: normal;
 }
 
 /*

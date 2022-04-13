@@ -41,6 +41,9 @@ document.addEventListener('keypress', function (e) {
 function startSearch() {
     sessionStorage.setItem("searchQuery", "")
     var location = document.getElementById("location").value;
+    if(location == "Taiwan"){
+        location = "Taiwan, Province of China"
+    }
     console.log(sessionStorage.getItem("searchQuery"));
 
     console.log("checking the checkboxes");
