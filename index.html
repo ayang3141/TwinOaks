@@ -389,9 +389,8 @@
                     console.log(item.fileFormat);
                     res.innerHTML = "<p class='resTitle'>" + item.title + "</p>" +
                         '<a class="smallLink" href="' + item.link + '" target="_blank">' + item.displayLink + "</a> <br>" +
-                        '<a class="resLink" href="' + item.link + '" target="_blank">' + item.link + "</a>" +
                         '<p class="blurb">' + item.snippet + '<p>' +
-                        '<p class="file">' + item.mime + '<p>';
+                        '<a class="resLink" href="' + item.link + '" target="_blank">' + item.link + "</a>";
                     list.appendChild(res);
                     // console.log(item);
                 }

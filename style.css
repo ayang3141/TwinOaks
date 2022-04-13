@@ -169,6 +169,37 @@ input[type="checkbox"]:checked+label {
     height: fit-content;
 }
 
+button {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-family: Noto Sans, sans-serif;
+    line-height: 14px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+    /* color: rgba(103, 56, 48, 1); */
+    border-color: rgba(103, 56, 48, 1);
+    /* font-weight: bold; */
+    border-style: solid;
+    cursor: pointer;
+}
+
+#buttons{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#starting {
+    margin: 0px;
+    font-size: 24px;
+    padding: 20px;
+    padding-bottom: 44px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 24px;
+}
+
 .row:after {
     content: "";
     display: table;
@@ -199,21 +230,6 @@ a.loc {
     color: black;
 }
 
-button {
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    font-family: Noto Sans, sans-serif;
-    line-height: 14px;
-    height: 30px;
-    margin-top: 10px;
-    margin-right: 10px;
-    /* color: rgba(103, 56, 48, 1); */
-    border-color: rgba(103, 56, 48, 1);
-    /* font-weight: bold; */
-    border-style: solid;
-    cursor: pointer;
-}
 
 .smalltextbox {
     width: 20px;
@@ -240,7 +256,7 @@ button {
     min-height: fit-content;
     /* height: 100px; */
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
     padding-left: 4px;
     margin-top: -1px;
 }
@@ -270,17 +286,30 @@ button {
 }
 
 p.resTitle {
-    margin-top: 0px;
-    margin-bottom: 20px;
+    margin-top: 5px;
+    font-size: 20px;
+    margin-bottom: 4px;
     font-weight: normal;
+    line-height: 14px;
 }
 
-/*
+a.smallLink{
+    text-decoration: none;
+    font-size: 10px;
+    margin-bottom: 12px;
+    color: black;
+    line-height: 14px;
+}
+/* 
 a.resLink{
     margin-bottom: 11px;
-     padding-bottom: 10px;
-     border-bottom: 10px; 
 } */
+
+p.blurb{
+    font-size: 16px;
+    margin-bottom: 11px;
+    line-height: 14px;
+}
 
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -298,16 +327,6 @@ a.resLink{
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
     display: block;
-}
-
-#buttons{
-    margin-bottom: 20px;
-    justify-content: center;
-    width: 100%;
-}
-
-#starting {
-    margin: 0px;
 }
 
 #location {
