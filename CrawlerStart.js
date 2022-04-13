@@ -346,11 +346,11 @@ function startSearch() {
 
     var hq = ""
 
-    var q = sessionStorage.getItem("searchQuery") + '+' + location + "+-filetype:pdf"
+    var q = sessionStorage.getItem("searchQuery") + '+' + location.replace(/\s/g, '+') + "+-filetype:pdf"
     console.log(q)
 
     console.log(sessionStorage.getItem("search"));
-    var url = "https://customsearch.googleapis.com/customsearch/v1?key=" + key + "&cx=" + cx + "&q=" + q + "&cr=" + location + "&exactTerms="
+    var url = "https://customsearch.googleapis.com/customsearch/v1?key=" + key + "&cx=" + cx + "&q=" + q + "&cr=" + location.replace(/\s/g, '+') + "&exactTerms="
         + exactTerms + "&orTerms=" + orTerms + "&gl=" + gl + "&start=" + sessionStorage.getItem("search") + "&hq=" + hq + "&callback=hndlr";
 
     console.log(url);
