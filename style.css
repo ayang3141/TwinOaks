@@ -183,6 +183,7 @@ a {
     font-family: Noto Sans, sans-serif;
     line-height: 14px;
     color: rgba(215, 126, 60, 1);
+    overflow: none;
     /* color: rgba(103, 56, 48, 1); */
 }
 
@@ -307,4 +308,10 @@ a.resLink{
     margin-left: 5px;
     margin-right: 25px;
     font-weight: bold;
+}
+
+button.pageButton{
+    width: 30px;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
 }

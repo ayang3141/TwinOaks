@@ -399,3 +399,25 @@ function setLocation(location) {
     document.getElementById("myDropdown").classList.toggle("show");
     document.getElementById("location").value = location;
 }
+
+function makePageButtons(numPages) {
+    var pages = document.getElementById("pages");
+    var children = pages.children;
+    for (var i = 0; i < children.length; i++) {
+        var ele = children[i];
+        if(ele.className == "pageButton"){
+            if(parseInt(ele.innerText) <= numPages){
+                ele.hidden = false;
+                ele.style = "display: inline-block;"
+            }else{
+                ele.hidden = true;
+            }
+        }
+    }
+}
+
+function setPage(thePage){
+    sessionStorage.setItem("search", 10*(thePage-1) + 1);
+    document.getElementById("pageNum").innerText = "Page: " + (Math.trunc(sessionStorage.getItem("search") / 10) + 1);
+    startSearch();
+}
