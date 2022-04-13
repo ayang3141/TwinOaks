@@ -41,9 +41,6 @@ document.addEventListener('keypress', function (e) {
 function startSearch() {
     sessionStorage.setItem("searchQuery", "")
     var location = document.getElementById("location").value;
-    if(location == "Taiwan"){
-        location = "Taiwan, Province of China"
-    }
     console.log(sessionStorage.getItem("searchQuery"));
 
     console.log("checking the checkboxes");
@@ -295,7 +292,7 @@ function startSearch() {
         { "name": "Sweden", "code": "SE" },
         { "name": "Switzerland", "code": "CH" },
         { "name": "Syrian Arab Republic", "code": "SY" },
-        { "name": "Taiwan, Province of China", "code": "TW" },
+        { "name": "Taiwan", "code": "TW" },
         { "name": "Tajikistan", "code": "TJ" },
         { "name": "Tanzania, United Republic of", "code": "TZ" },
         { "name": "Thailand", "code": "TH" },
