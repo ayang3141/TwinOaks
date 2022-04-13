@@ -372,9 +372,7 @@
         function hndlr(response) {
             console.log("in hndlr");
             var list = document.getElementById("results");
-            if (response != null && response.items != null && Object.keys(response.items).length == 10) {
-                var numPages = parseInt(response.searchInformation.totalResults/10 + 1); 
-                console.log(numPages);
+            if (response != null && response.items != null) {
                 document.body.style.background = "linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 120px, rgb(224, 195, 173) 100vh, rgba(222, 133, 65, 1) 100%)";
 
                 for (var i = 0; i < Object.keys(response.items).length; i++) {

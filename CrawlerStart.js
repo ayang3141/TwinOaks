@@ -339,16 +339,18 @@ function startSearch() {
 
     var exactTerms = gl
 
+    var excludeTerms = "filetype:pdf"
+
     var orTerms = ""
 
     var hq = ""
 
-    var q = sessionStorage.getItem("searchQuery") + '+' + location.replace(/\s/g, '+') + "+-filetype:pdf"
+    var q = sessionStorage.getItem("searchQuery") + '+' + location.replace(/\s/g, '+')
     console.log(q)
 
     console.log(sessionStorage.getItem("search"));
-    var url = "https://customsearch.googleapis.com/customsearch/v1?key=" + key + "&cx=" + cx + "&q=" + q + "&cr=" + location.replace(/\s/g, '+') + "&exactTerms="
-        + exactTerms + "&orTerms=" + orTerms + "&gl=" + gl + "&start=" + sessionStorage.getItem("search") + "&hq=" + hq + "&callback=hndlr";
+    var url = "https://customsearch.googleapis.com/customsearch/v1?key=" + key + "&cx=" + cx + "&q=" + q + "&cr=" + "country" + gl + "&exactTerms="
+        + exactTerms + "&orTerms=" + orTerms + "&gl=" + gl + "&start=" + sessionStorage.getItem("search") + "&hq=" + hq + "&excludeTerms=" + excludeTerms + "&callback=hndlr";
 
     console.log(url);
     var apiLink = document.createElement("script")
