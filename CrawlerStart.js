@@ -8,16 +8,24 @@ function initialize() {
 }
 
 function addword() {
-    var wurd = document.getElementById("keywordInput").value;
+    var word = document.getElementById("keywordInput").value;
     // var wurd = prompt("Add Key Word / Phrase Here");
     // sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + " " + wurd)
-    if (wurd != "") {
+    if (word != "") {
         var li = document.createElement("li");
-        li.innerHTML = wurd;
+        li.innerHTML = word;
         var ul = document.getElementById("theList");
         ul.appendChild(li);
         document.getElementById("wordlist").hidden = false;
         document.getElementById("clearinglist").hidden = false;
+        if (!sessionStorage.getItem("searchQuery").includes(word.replace(/\s/g, '+'))){
+            if (sessionStorage.getItem("searchQuery") == "") {
+                sessionStorage.setItem("searchQuery", word.replace(/\s/g, '+'));
+            }
+            else {
+                sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + "+" + word.replace(/\s/g, '+'));
+            }
+        }
     }
 }
 function clearList() {
@@ -39,7 +47,6 @@ document.addEventListener('keypress', function (e) {
 });
 
 function startSearch() {
-    sessionStorage.setItem("searchQuery", "")
     var location = document.getElementById("location").value;
     console.log(sessionStorage.getItem("searchQuery"));
 
@@ -57,12 +64,6 @@ function startSearch() {
             else {
                 sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + "+" + box.id.replace(/\s/g, '+'));
             }
-        }
-    }
-    var keyWords = document.getElementsByTagName("li");
-    for (var i = 0; i < keyWords.length; i++) {
-        if (!sessionStorage.getItem('searchQuery').includes(keyWords[i])) {
-            sessionStorage.setItem("searchQuery", "+" + sessionStorage.getItem("searchQuery") + keyWords[i].textContent);
         }
     }
 
@@ -407,19 +408,19 @@ function makePageButtons(numPages) {
     var children = pages.children;
     for (var i = 0; i < children.length; i++) {
         var ele = children[i];
-        if(ele.className == "pageButton"){
-            if(parseInt(ele.innerText) <= numPages){
+        if (ele.className == "pageButton") {
+            if (parseInt(ele.innerText) <= numPages) {
                 ele.hidden = false;
                 ele.style = "display: inline-block;"
-            }else{
+            } else {
                 ele.hidden = true;
             }
         }
     }
 }
 
-function setPage(thePage){
-    sessionStorage.setItem("search", 10*(thePage-1) + 1);
+function setPage(thePage) {
+    sessionStorage.setItem("search", 10 * (thePage - 1) + 1);
     document.getElementById("pageNum").innerText = "Page: " + (Math.trunc(sessionStorage.getItem("search") / 10) + 1);
     startSearch();
 }
