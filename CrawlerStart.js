@@ -28,6 +28,29 @@ function addword() {
         }
     }
 }
+
+function removeword() {
+    var word = document.getElementById("removedWordInput").value;
+    // var wurd = prompt("Add Key Word / Phrase Here");
+    // sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + " " + wurd)
+    if (word != "") {
+        var li = document.createElement("li");
+        li.innerHTML = word;
+        var ul = document.getElementById("removedList");
+        ul.appendChild(li);
+        document.getElementById("remlist").hidden = false;
+        document.getElementById("clearingRlist").hidden = false;
+        // if (!sessionStorage.getItem("searchQuery").includes(word.replace(/\s/g, '+'))){
+        //     if (sessionStorage.getItem("searchQuery") == "") {
+        //         sessionStorage.setItem("searchQuery", word.replace(/\s/g, '+'));
+        //     }
+        //     else {
+        //         sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + "+" + word.replace(/\s/g, '+'));
+        //     }
+        // }
+    }
+}
+
 function clearList() {
     let ul = document.getElementById("theList");
     while (ul.firstChild) {
@@ -35,6 +58,16 @@ function clearList() {
     }
     document.getElementById("wordlist").hidden = true;
     document.getElementById("clearinglist").hidden = true;
+    initialize()
+}
+
+function clearRList() {
+    let ul = document.getElementById("removedList");
+    while (ul.firstChild) {
+        ul.removeChild(ul.firstChild);
+    }
+    document.getElementById("remlist").hidden = true;
+    document.getElementById("clearingRlist").hidden = true;
     initialize()
 }
 

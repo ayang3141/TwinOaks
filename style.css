@@ -140,6 +140,7 @@ input[type="checkbox"]+label {
     -webkit-border-radius: 5px;
     border-radius: 5px;
     text-align: center;
+    font-size: 16px;
 }
 
 input[type="checkbox"]:checked+label {
@@ -151,25 +152,29 @@ input[type="checkbox"]:checked+label {
 
 .small-column {
     float: left;
-    width: 30%;
-    height: 100%;
+    padding-top: 50px;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: fit-content;
+    width: 15%;
 }
 
 .large-column {
     float: left;
-    height: 100%;
-    margin-left: 2%;
-    margin-right: 2%;
-    width: 96%;
+    padding-top: 50px;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: fit-content;
+    width: 25%;
 }
 
 .column {
     float: left;
     padding-top: 50px;
-    width: 31%;
     margin-left: 1%;
     margin-right: 1%;
     height: fit-content;
+    width: 16%;
 }
 
 button {
@@ -227,7 +232,8 @@ a {
 }
 
 #inputs {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(103, 56, 48, 1) 5%, rgba(103, 56, 48, 1) 95%, rgba(255, 255, 255, 0) 100%);
+    background: rgba(103, 56, 48, 1);
+    /* linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(103, 56, 48, 1) 5%, rgba(103, 56, 48, 1) 95%, rgba(255, 255, 255, 0) 100%); */
 }
 
 a.loc {
@@ -346,6 +352,12 @@ p.blurb{
     border: solid 2px black;
 }
 
+#removedWordInput {
+    width: 100%;
+    height: 32px;
+    border: solid 2px black;
+}
+
 #pages {
     margin-bottom: 10px;
 }
@@ -360,4 +372,16 @@ button.pageButton{
     width: 30px;
     margin-left: 0.1%;
     margin-right: 0.1%;
+}
+
+#wordlist {
+    color:white;
+}
+
+#remlist {
+    color:white;
+}
+
+li {
+    color: white;
 }

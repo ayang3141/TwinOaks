@@ -20,7 +20,7 @@
     </div>
     <div class="row" id="inputs">
         <div class="row" id="params">
-            <div class="column" id="locationcolumn">
+            <div class="small-column" id="locationcolumn">
                 <form>
                     <input type="text" name="Country Code" id="location" placeholder="Search for a location"
                         onclick="showLocations();" onkeyup="filterFunction()" />
@@ -297,7 +297,7 @@
                     </div>
                 </form>
             </div>
-            <div class="column" id="oldwords">
+            <div class="large-column" id="oldwords">
                 <input class="box" type="checkbox" id="Project-based learning" name="project">
                 <label for="Project-based learning">Project-based learning</label>
                 <!-- <input class="box" type="checkbox" id="Creativity" name="creative">
@@ -325,7 +325,7 @@
             <input class="box" type="checkbox" id="21st century skills" name="21">
             <label for="21st century skills">21st century skills</label> -->
             </div>
-            <div class="column" id="newwords">
+            <div class="small-column" id="newwords">
                 <form>
                     <input type="text" name="keywords" id="keywordInput" placeholder="Add new key words" />
                 </form>
@@ -336,9 +336,20 @@
                     <button hidden onclick="clearList();" id="clearinglist">Clear</button>
                 </div>
             </div>
+            <div class="small-column" id="remove">
+                <form>
+                    <input type="text" name="removewords" id="removedWordInput" placeholder="Add removed words" />
+                </form>
+                <button onclick="removeword();">Add</button>
+                <div id="content">
+                    <p hidden id="remlist">Removed Words</p>
+                    <ul id="removedList"></ul>
+                    <button hidden onclick="clearRList();" id="clearingRlist">Clear</button>
+                </div>
+            </div>
         </div>
         <div class="buttons" id="buttons">
-            <button id="starting" onclick="startSearch();">Start Search!</button>
+            <button id="starting" onclick="startSearch();">Search</button>
         </div>
     </div>
     <div class="row">
