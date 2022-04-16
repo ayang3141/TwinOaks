@@ -397,6 +397,11 @@ button.pageButton{
     color:white;
 }
 
+#outputs {
+    padding-top: 10px;
+    width: 98%;
+}
+
 li {
     color: white;
 }
