@@ -278,7 +278,6 @@ a.loc {
     /* color: rgba(103, 56, 48, 1); */
     line-height: 14px;
     background: rgb(255, 255, 255);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(217, 181, 154, 1) 100%);
     min-height: fit-content;
     /* height: 100px; */
     padding-top: 25px;
