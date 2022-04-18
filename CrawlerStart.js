@@ -3,10 +3,6 @@ window.onload = function initialize() {
     sessionStorage.setItem("search", 1)
 }
 
-function initialize() {
-    sessionStorage.setItem("searchQuery", "");
-}
-
 function addword() {
     var word = document.getElementById("keywordInput").value;
     // var wurd = prompt("Add Key Word / Phrase Here");
@@ -59,7 +55,7 @@ function clearList() {
     }
     document.getElementById("aList").hidden = true;
     // document.getElementById("clearinglist").hidden = true;
-    initialize()
+    sessionStorage.setItem("searchQuery", "");
 }
 
 function clearRList() {
@@ -69,7 +65,6 @@ function clearRList() {
     }
     document.getElementById("rList").hidden = true;
     // document.getElementById("clearingRlist").hidden = true;
-    initialize()
 }
 
 
