@@ -216,6 +216,7 @@ button {
     padding-top: 40px;
 }
 
+/* Styling the start button */
 #starting {
     display: inline-block;
     /* padding-top: 10px; */
@@ -240,6 +241,7 @@ button {
     vertical-align: center;
 }
 
+/* Adjusting the row */
 .row:after {
     content: "";
     display: table;
@@ -247,6 +249,7 @@ button {
     height: 100%;
 }
 
+/* More text settings */
 p {
     font-family: Noto Sans, sans-serif;
     line-height: 14px;
@@ -262,16 +265,17 @@ a {
     /* color: rgba(103, 56, 48, 1); */
 }
 
+/* Establishing the brown background for the inputs */
 #inputs {
     background: rgba(103, 56, 48, 1);
     /* linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(103, 56, 48, 1) 5%, rgba(103, 56, 48, 1) 95%, rgba(255, 255, 255, 0) 100%); */
     padding-bottom: 30px;
 }
 
+/* Adjusting the text for the dropdown menu */
 a.loc {
     color: black;
 }
-
 
 .smalltextbox {
     width: 20px;
@@ -282,6 +286,7 @@ a.loc {
     /* rgba(103, 56, 48, 1); */
 }
 
+/* The results rectangle */
 .roundrect {
     border: 1px solid rgba(103, 56, 48, 1);
     /* -moz-border-radius: 15px; */
@@ -303,6 +308,7 @@ a.loc {
     margin-top: -1px;
 }
 
+/* Styling the box containing the list of custom words */
 .wordContent{
     margin-top: 10px;
     padding: 10px;
@@ -338,6 +344,7 @@ a.loc {
     overflow: auto;
 }
 
+/* Styling for the result box */
 p.resTitle {
     margin-top: 5px;
     font-size: 20px;
@@ -382,6 +389,7 @@ p.blurb{
     display: block;
 }
 
+/* changing the width for the inputs */
 #location {
     width: 96%;
     height: 32px;
@@ -400,6 +408,7 @@ p.blurb{
     border: solid 2px black;
 }
 
+/* Margins fr the page buttons */
 #pages {
     margin-bottom: 10px;
 }
@@ -416,7 +425,7 @@ button.pageButton{
     margin-right: 0.1%;
 }
 
-
+/* Styling the outputs section */
 #outputs {
     padding-top: 10px;
     width: 98%;

@@ -1,4 +1,5 @@
 window.onload = function initialize() {
+    // Setting up session storage variables to be clear
     sessionStorage.setItem("searchQuery", "")
     sessionStorage.setItem("search", 1)
 }
@@ -8,12 +9,14 @@ function addword() {
     // var wurd = prompt("Add Key Word / Phrase Here");
     // sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + " " + wurd)
     if (word != "") {
+        // Make a list element to add word
         var li = document.createElement("li");
         li.innerHTML = word;
         var ul = document.getElementById("theList");
         ul.appendChild(li);
+        // Show rectangle with custom words
         document.getElementById("aList").hidden = false;
-        // document.getElementById("clearinglist").hidden = false;
+        // Removes spaces
         if (!sessionStorage.getItem("searchQuery").includes(word.replace(/\s/g, '+'))) {
             if (sessionStorage.getItem("searchQuery") == "") {
                 sessionStorage.setItem("searchQuery", word.replace(/\s/g, '+'));
@@ -30,13 +33,14 @@ function removeword() {
     // var wurd = prompt("Add Key Word / Phrase Here");
     // sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + " " + wurd)
     if (word != "") {
+        // Make a list element to add word
         var li = document.createElement("li");
         li.innerHTML = word;
         var ul = document.getElementById("removedList");
         ul.appendChild(li);
-        // document.getElementById("clearingRlist").hidden = false;
-
+        // Show rectangle with custom words
         document.getElementById("rList").hidden = false;
+        // Removes spaces
         // if (!sessionStorage.getItem("searchQuery").includes(word.replace(/\s/g, '+'))){
         //     if (sessionStorage.getItem("searchQuery") == "") {
         //         sessionStorage.setItem("searchQuery", word.replace(/\s/g, '+'));
@@ -50,24 +54,29 @@ function removeword() {
 
 function clearList() {
     let ul = document.getElementById("theList");
+    // Gets rid of all list elements
     while (ul.firstChild) {
         ul.removeChild(ul.firstChild);
     }
+    // hides the rectangle of custom words
     document.getElementById("aList").hidden = true;
     // document.getElementById("clearinglist").hidden = true;
+    // clears the custom added words
     sessionStorage.setItem("searchQuery", "");
 }
 
 function clearRList() {
     let ul = document.getElementById("removedList");
+    // Gets rid of all list elements
     while (ul.firstChild) {
         ul.removeChild(ul.firstChild);
     }
+    // Hides the rectangle of custom words
     document.getElementById("rList").hidden = true;
     // document.getElementById("clearingRlist").hidden = true;
 }
 
-
+// Prevents the ENTER key from clearing element
 document.addEventListener('keypress', function (e) {
     if (e.keyCode === 13 || e.which === 13) {
         e.preventDefault();
@@ -75,16 +84,19 @@ document.addEventListener('keypress', function (e) {
     }
 });
 
+// Starts the search, starts from "Search" button
 function startSearch() {
+    // Get location
     var location = document.getElementById("location").value;
     console.log(sessionStorage.getItem("searchQuery"));
-
+    // Get all values from checkboxes
     console.log("checking the checkboxes");
     var boxes = document.getElementsByClassName("box");
     // console.log(boxes.length);
     for (var i = 0; i < boxes.length; i++) {
         box = boxes[i];
         // console.log(box);
+        // Removes spaces from checkboxes
         if (box.checked && !sessionStorage.getItem("searchQuery").includes(box.id.replace(/\s/g, '+'))) {
             // console.log(box.id);
             if (sessionStorage.getItem("searchQuery") == "") {
@@ -95,12 +107,13 @@ function startSearch() {
             }
         }
     }
-
+    // Clears current results
     var list = document.getElementById("results");
     while (list.firstChild) {
         list.removeChild(list.firstChild);
     }
 
+    // List of locations, "name" is what's in the text box, "code" is what's in the query
     var countries = [
         { "name": "Afghanistan", "code": "AF" },
         { "name": "Aland Islands", "code": "AX" },
@@ -355,7 +368,7 @@ function startSearch() {
         { "name": "Zambia", "code": "ZM" },
         { "name": "Zimbabwe", "code": "ZW" }
     ];
-
+    // Assemble the query
     var key = "AIzaSyAEriC2fkUHJfDVV85neeITAepB5EwNAxA";
 
     var gl = ""
@@ -388,13 +401,16 @@ function startSearch() {
     document.head.appendChild(apiLink);
 }
 
-
+// The next page button alters the query to have new results, and searches again
 function getMoreResults() {
+    // the "search" variable is the number of results that is an imput in the query
+    // adding 10 goes to the next page
     sessionStorage.setItem("search", parseInt(sessionStorage.getItem("search")) + 10);
     document.getElementById("pageNum").innerText = "Page: " + (Math.trunc(sessionStorage.getItem("search") / 10) + 1);
     startSearch();
 }
 
+// The pervious page button, does does similar action to Next page 
 function getLessResults() {
     if (sessionStorage.getItem("search") > 1) {
         sessionStorage.setItem("search", sessionStorage.getItem("search") - 10);
@@ -406,6 +422,7 @@ function getLessResults() {
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 
+// shows the dropdown list when clicking on the textbox
 function showLocations() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -427,11 +444,13 @@ function filterFunction() {
     }
 }
 
+// Clicking on the location in the dropdown changes the value in the textbox
 function setLocation(location) {
     document.getElementById("myDropdown").classList.toggle("show");
     document.getElementById("location").value = location;
 }
 
+// makes the buttons to change pages
 function makePageButtons(numPages) {
     var pages = document.getElementById("pages");
     var children = pages.children;
@@ -448,6 +467,7 @@ function makePageButtons(numPages) {
     }
 }
 
+// Similar to the Next Page button, it changes the query's value for pages.
 function setPage(thePage) {
     sessionStorage.setItem("search", 10 * (thePage - 1) + 1);
     document.getElementById("pageNum").innerText = "Page: " + (Math.trunc(sessionStorage.getItem("search") / 10) + 1);
