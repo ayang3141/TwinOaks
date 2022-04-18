@@ -16,9 +16,9 @@ function addword() {
         li.innerHTML = word;
         var ul = document.getElementById("theList");
         ul.appendChild(li);
-        document.getElementById("wordlist").hidden = false;
-        document.getElementById("clearinglist").hidden = false;
-        if (!sessionStorage.getItem("searchQuery").includes(word.replace(/\s/g, '+'))){
+        document.getElementById("aList").hidden = false;
+        // document.getElementById("clearinglist").hidden = false;
+        if (!sessionStorage.getItem("searchQuery").includes(word.replace(/\s/g, '+'))) {
             if (sessionStorage.getItem("searchQuery") == "") {
                 sessionStorage.setItem("searchQuery", word.replace(/\s/g, '+'));
             }
@@ -38,8 +38,9 @@ function removeword() {
         li.innerHTML = word;
         var ul = document.getElementById("removedList");
         ul.appendChild(li);
-        document.getElementById("remlist").hidden = false;
-        document.getElementById("clearingRlist").hidden = false;
+        // document.getElementById("clearingRlist").hidden = false;
+
+        document.getElementById("rList").hidden = false;
         // if (!sessionStorage.getItem("searchQuery").includes(word.replace(/\s/g, '+'))){
         //     if (sessionStorage.getItem("searchQuery") == "") {
         //         sessionStorage.setItem("searchQuery", word.replace(/\s/g, '+'));
@@ -56,8 +57,8 @@ function clearList() {
     while (ul.firstChild) {
         ul.removeChild(ul.firstChild);
     }
-    document.getElementById("wordlist").hidden = true;
-    document.getElementById("clearinglist").hidden = true;
+    document.getElementById("aList").hidden = true;
+    // document.getElementById("clearinglist").hidden = true;
     initialize()
 }
 
@@ -66,8 +67,8 @@ function clearRList() {
     while (ul.firstChild) {
         ul.removeChild(ul.firstChild);
     }
-    document.getElementById("remlist").hidden = true;
-    document.getElementById("clearingRlist").hidden = true;
+    document.getElementById("rList").hidden = true;
+    // document.getElementById("clearingRlist").hidden = true;
     initialize()
 }
 

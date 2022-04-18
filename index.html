@@ -330,10 +330,10 @@
                     <input type="text" name="keywords" id="keywordInput" placeholder="Add new key words" />
                 </form>
                 <button onclick="addword();">Add</button>
-                <div id="content">
-                    <p hidden id="wordlist">Screening In Use</p>
+                <div hidden class="wordContent" id="aList">
+                    <p id="wordlist">Screening In Use</p>
                     <ul id="theList"></ul>
-                    <button hidden onclick="clearList();" id="clearinglist">Clear</button>
+                    <button onclick="clearList();" id="clearinglist">Clear</button>
                 </div>
             </div>
             <div class="small-column" id="remove">
@@ -341,10 +341,10 @@
                     <input type="text" name="removewords" id="removedWordInput" placeholder="Add removed words" />
                 </form>
                 <button onclick="removeword();">Add</button>
-                <div id="content">
-                    <p hidden id="remlist">Removed Words</p>
+                <div hidden class="wordContent" id="rList">
+                    <p id="remlist">Removed Words</p>
                     <ul id="removedList"></ul>
-                    <button hidden onclick="clearRList();" id="clearingRlist">Clear</button>
+                    <button onclick="clearRList();" id="clearingRlist">Clear</button>
                 </div>
             </div>
             <div class="buttons" id="buttons">
