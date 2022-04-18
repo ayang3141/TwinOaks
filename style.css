@@ -1,25 +1,27 @@
-header {
+/* header {
     font-family: Noto Sans, sans-serif;
     font-weight: bold condensed;
     font-size: 25px;
     margin-bottom: 0px;
     padding-bottom: 0px;
     border-bottom: 0px;
-}
+} */
 
+/* Establish the background */
 body {
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 120px, rgb(224, 195, 173) 100vh, rgba(222, 133, 65, 1) 2000px);
     height: 100vh;
 }
 
+/* Have logo not have an underline */
 .logolink {
     text-decoration: none;
 }
-
+/* 
 footer {
     height: 40px;
-}
+} */
 
 /* hr {
     width: 100%;
@@ -32,11 +34,13 @@ footer {
     margin-bottom: 0px;
 } */
 
+/* styling the image */
 img {
     height: 160px;
     vertical-align: middle;
 }
 
+/* styling the list element */
 li {
     font-family: Noto Sans, sans-serif;
     line-height: 14px;
@@ -45,6 +49,7 @@ li {
     /* font-weight: bold; */
 }
 
+/* adjusting the title section */
 .heading {
     height: fit-content;
     /* margin-left: -8px; */
@@ -56,6 +61,7 @@ li {
     vertical-align: middle;
 }
 
+/* Text settings */
 h1 {
     font-family: Noto Sans, sans-serif;
     line-height: 14px;
@@ -121,6 +127,7 @@ input[type="text"]{
     font-size: 16px;
 }
 
+/* The boxes for tier 2 words */
 input[type="checkbox"]:not(:checked),
 input[type="checkbox"]:checked {
     position: absolute;
@@ -154,6 +161,7 @@ input[type="checkbox"]:checked+label {
     background-color: rgba(217, 181, 154, 1);
 }
 
+/* Making the smaller column a smaller width */
 .small-column {
     float: left;
     padding-top: 50px;
@@ -163,6 +171,7 @@ input[type="checkbox"]:checked+label {
     width: 15%;
 }
 
+/* Making the large column a larger width */
 .large-column {
     float: left;
     padding-top: 50px;
@@ -172,6 +181,7 @@ input[type="checkbox"]:checked+label {
     width: 30%;
 }
 
+/* Setting up a standard column */
 .column {
     float: left;
     padding-top: 50px;
@@ -181,6 +191,7 @@ input[type="checkbox"]:checked+label {
     width: 16%;
 }
 
+/* Styling the button */
 button {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -198,6 +209,7 @@ button {
     cursor: pointer;
 }
 
+/* Styling the section that contains the search button */
 #buttons{
     text-align: center;
     margin-bottom: 20px;

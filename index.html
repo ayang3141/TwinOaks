@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <!-- The HTML of the tab -->
     <title> Twin Oaks Partner Searching</title>
     <link rel="icon" type="image/x-icon" href="logo.jfif" />
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -9,6 +10,7 @@
 </head>
 
 <body>
+    <!-- The white space at the top of the web page -->
     <div class="heading">
         <a class="logolink" href="https://www.twinoaks-edu.com/" target="_blank">
             <img src="logo.jfif" alt="Twin Oaks logo">
@@ -18,12 +20,15 @@
             <h3>Partner Searching Site</h3>
         </div>
     </div>
+    <!-- The inputs section of the interface -->
     <div class="row" id="inputs">
         <div class="row" id="params">
+            <!-- The input for location -->
             <div class="small-column" id="locationcolumn">
                 <form>
                     <input type="text" name="Country Code" id="location" placeholder="Search for a location"
                         onclick="showLocations();" onkeyup="filterFunction()" />
+                        <!-- The drop down menu, this appears after you click on the textbox -->
                     <div id="myDropdown" class="dropdown-content">
                         <a class="loc" onclick="setLocation('Afghanistan');">Afghanistan</a>
                         <a class="loc" onclick="setLocation('Aland Islands');">Aland Islands</a>
@@ -297,6 +302,7 @@
                     </div>
                 </form>
             </div>
+            <!-- The buttons for the tier 2 keywords, Comments are other buttons -->
             <div class="large-column" id="oldwords">
                 <input class="box" type="checkbox" id="Project-based learning" name="project">
                 <label for="Project-based learning">Project-based learning</label>
@@ -325,38 +331,45 @@
             <input class="box" type="checkbox" id="21st century skills" name="21">
             <label for="21st century skills">21st century skills</label> -->
             </div>
+            <!-- The input box for tier 3, custom words -->
             <div class="small-column" id="newwords">
                 <form>
                     <input type="text" name="keywords" id="keywordInput" placeholder="Add new key words" />
                 </form>
                 <button onclick="addword();">Add</button>
+                <!-- The hidden section, appears after you add a custom word -->
                 <div hidden class="wordContent" id="aList">
                     <p id="wordlist">Screening In Use</p>
                     <ul id="theList"></ul>
                     <button onclick="clearList();" id="clearinglist">Clear</button>
                 </div>
             </div>
+            <!-- The input box for removed words -->
             <div class="small-column" id="remove">
                 <form>
                     <input type="text" name="removewords" id="removedWordInput" placeholder="Add removed words" />
                 </form>
                 <button onclick="removeword();">Add</button>
+                <!-- The hidden section, appeaers after you add a word to remove -->
                 <div hidden class="wordContent" id="rList">
                     <p id="remlist">Removed Words</p>
                     <ul id="removedList"></ul>
                     <button onclick="clearRList();" id="clearingRlist">Clear</button>
                 </div>
             </div>
+            <!-- Start the search button -->
             <div class="buttons" id="buttons">
                 <button id="starting" onclick="startSearch();">Search</button>
             </div>
         </div>
     </div>
+    <!-- The section for outputs -->
     <div class="row">
         <div class="large-column" id="outputs">
             <h4>Search Results:</h4>
             <div id="results">
             </div>
+            <!-- The section for page buttons -->
             <div id="pages">
                 <p id="pageNum" hidden>Page: 1</p>
                 <button id="lessRes" onclick="getLessResults();" hidden>Previous Page</button>
@@ -377,14 +390,18 @@
 
     <script src="CrawlerStart.js"> </script>
     <script>
+        // The hndlr script that occurs after the search has found results
         function hndlr(response) {
             console.log("in hndlr");
             var list = document.getElementById("results");
+            // Check if there are results
             if (response != null && response.items != null) {
                 console.log(response.searchInformation.totalResults);
                 numPages = parseInt(parseInt(response.searchInformation.totalResults) / 10) + 1
                 console.log(numPages);
+                // change the background to fit the expanded page
                 document.body.style.background = "linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 120px, rgb(224, 195, 173) 100vh, rgba(222, 133, 65, 1) 100%)";
+                // Loop for each result found, 10 at most
                 for (var i = 0; i < Object.keys(response.items).length; i++) {
                     // console.log(i);
                     var item = response.items[i];
@@ -393,6 +410,7 @@
                     res.classList.add('roundrect');
                     console.log(item.displayLink);
                     console.log(item.fileFormat);
+                    // Make and add the rectangle for the result
                     res.innerHTML = "<p class='resTitle'>" + item.title + "</p>" +
                         '<a class="smallLink" href="' + item.link + '" target="_blank">' + item.displayLink + "</a> <br>" +
                         '<p class="blurb">' + item.snippet + '<p>' +
@@ -400,13 +418,14 @@
                     list.appendChild(res);
                     // console.log(item);
                 }
+                // Making the page buttons
                 console.log("Making page buttons");
                 if (numPages >= 10) {
                     makePageButtons(10);
                 } else {
                     makePageButtons(numPages);
                 }
-
+                // Add next page and pevious page functions based on which page it currently is
                 if (sessionStorage.getItem("search") == 1) {
                     document.getElementById("moreRes").hidden = false;
                     document.getElementById("moreRes").style = "display: inline-block;";
@@ -422,6 +441,7 @@
                 document.getElementById("pageNum").style = "display: inline-block;";
             }
             else {
+                // Show a "no results" rectangle if there are no results
                 var res = document.createElement("div");
                 res.classList.add('roundrect');
                 res.innerHTML = "<p>No Results Found</p>";
@@ -429,6 +449,7 @@
 
             }
             // console.log(sessionStorage.getItem("search"));
+            // Still make next page and previous page buttons 
             if (sessionStorage.getItem("search") <= 1) {
                 document.getElementById("moreRes").hidden = false;
                 document.getElementById("moreRes").style = "display: inline-block;";
