@@ -380,11 +380,11 @@ function startSearch() {
 
     var cx = "c7b3e921ea64eca47";
 
-    var exactTerms = gl
+    var exactTerms = ""
 
     var excludeTerms = "filetype:pdf"
 
-    var orTerms = ""
+    var orTerms = "organization+foundation"
 
     var hq = ""
 
