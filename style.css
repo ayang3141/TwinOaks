@@ -168,7 +168,7 @@ input[type="checkbox"]:checked+label {
     margin-left: 1%;
     margin-right: 1%;
     height: fit-content;
-    width: 15%;
+    width: 18%;
 }
 
 /* Making the large column a larger width */
@@ -178,7 +178,7 @@ input[type="checkbox"]:checked+label {
     margin-left: 1%;
     margin-right: 1%;
     height: fit-content;
-    width: 30%;
+    width: 36%;
 }
 
 /* Setting up a standard column */
@@ -268,6 +268,8 @@ a {
 /* Establishing the brown background for the inputs */
 #inputs {
     background: rgba(103, 56, 48, 1);
+    padding-left: 12%;
+    padding-right: 8%;
     /* linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(103, 56, 48, 1) 5%, rgba(103, 56, 48, 1) 95%, rgba(255, 255, 255, 0) 100%); */
     padding-bottom: 30px;
 }
@@ -312,7 +314,7 @@ a.loc {
 .wordContent{
     margin-top: 10px;
     padding: 10px;
-    padding-right: 15px;
+    padding-right: 25px;
     line-height: 14px;
     border: 2px solid black;
     color: black;
@@ -345,7 +347,8 @@ a.loc {
 }
 
 /* Styling for the result box */
-p.resTitle {
+.resTitle {
+    color: rgb(0, 128, 255);
     margin-top: 5px;
     font-size: 20px;
     margin-bottom: 4px;
@@ -357,7 +360,7 @@ a.smallLink{
     text-decoration: none;
     font-size: 10px;
     margin-bottom: 12px;
-    color: black;
+    color: rgb(91, 178, 29);
     line-height: 14px;
 }
 /* 
@@ -411,6 +414,12 @@ p.blurb{
 /* Margins fr the page buttons */
 #pages {
     margin-bottom: 10px;
+}
+
+#totalRes {
+    margin-left: 5px;
+    margin-right: 25px;
+    font-weight: bold;
 }
 
 #pageNum {
