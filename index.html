@@ -28,6 +28,8 @@
                 <input type="text" name="Country Code" id="location" placeholder="Search for a location"
                     onclick="showLocations();" onkeyup="filterFunction()" />
                 <!-- The drop down menu, this appears after you click on the textbox -->
+                <!-- To change what appears in the textbox, change the value inside the setLocation function -->
+                <!-- IMPORTANT: After changing the value inside set location, change the "name" value in CrawlerStart.js  -->
                 <div id="myDropdown" class="dropdown-content">
                     <a class="loc" onclick="setLocation('Afghanistan');">Afghanistan</a>
                     <a class="loc" onclick="setLocation('Aland Islands');">Aland Islands</a>
@@ -281,9 +283,9 @@
                     <a class="loc" onclick="setLocation('Tuvalu');">Tuvalu</a>
                     <a class="loc" onclick="setLocation('Uganda');">Uganda</a>
                     <a class="loc" onclick="setLocation('Ukraine');">Ukraine</a>
-                    <a class="loc" onclick="setLocation('Ukraine');">United Arab Emirates</a>
-                    <a class="loc" onclick="setLocation('Uganda');">United Kingdom</a>
-                    <a class="loc" onclick="setLocation('Uganda');">United States</a>
+                    <a class="loc" onclick="setLocation('United Arab Emirates');">United Arab Emirates</a>
+                    <a class="loc" onclick="setLocation('United Kingdom');">United Kingdom</a>
+                    <a class="loc" onclick="setLocation('United States');">United States</a>
                     <a class="loc" onclick="setLocation('United States Minor Outlying Islands');">U.S. Minor
                         Outlying Islands</a>
                     <a class="loc" onclick="setLocation('Uruguay');">Uruguay</a>
@@ -302,10 +304,10 @@
             </form>
         </div>
         <!-- The buttons for the tier 2 keywords, Comments are other buttons -->
-        <div class="large-column" id="oldwords">
+        <!-- <div class="large-column" id="oldwords">
             <input class="box" type="checkbox" id="Project-based learning" name="project">
             <label for="Project-based learning">Project-based learning</label>
-            <!-- <input class="box" type="checkbox" id="Creativity" name="creative">
+            <input class="box" type="checkbox" id="Creativity" name="creative">
             <label for="Creativity">Creativity</label><br />
             <input class="box" type="checkbox" id="Collaboration" name="collab">
             <label for="Collaboration">Collaboration</label>
@@ -318,18 +320,18 @@
             <input class="box" type="checkbox" id="Design" name="design">
             <label for="Design">Design</label>
             <input class="box" type="checkbox" id="Innovation" name="innovation">
-            <label for="Innovation">Innovation</label><br /> -->
+            <label for="Innovation">Innovation</label><br />
             <input class="box" type="checkbox" id="Real World Learning" name="realWorld">
             <label for="Real World Learning">Real World Learning</label>
-            <!-- <input class="box" type="checkbox" id="Leadership" name="leader">
+            <input class="box" type="checkbox" id="Leadership" name="leader">
             <label for="leader">Leadership</label><br />
             <input class="box" type="checkbox" id="Life-long learning" name="life">
             <label for="Life-long learning">Life-long learning</label>
             <input class="box" type="checkbox" id="Soft skills" name="soft">
             <label for="Soft skills">Soft skills</label><br />
             <input class="box" type="checkbox" id="21st century skills" name="21">
-            <label for="21st century skills">21st century skills</label> -->
-        </div>
+            <label for="21st century skills">21st century skills</label>
+        </div> -->
         <!-- The input box for tier 3, custom words -->
         <div class="small-column" id="newwords">
             <form>

@@ -115,6 +115,8 @@ function startSearch() {
     }
 
     // List of locations, "name" is what's in the text box, "code" is what's in the query
+    // IMPORTANT: The "name" attribute MUST be exactly the same as the value in the text box when searching.
+    // IMPORTANT: Do NOT change the "code" attribute unless Google changes the specific country code.
     var countries = [
         { "name": "Afghanistan", "code": "AF" },
         { "name": "Aland Islands", "code": "AX" },
