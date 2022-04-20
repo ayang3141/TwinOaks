@@ -1,6 +1,7 @@
 window.onload = function initialize() {
     // Setting up session storage variables to be clear
     sessionStorage.setItem("searchQuery", "")
+    sessionStorage.setItem("removeQuery","")
     sessionStorage.setItem("search", 1)
 }
 
@@ -41,14 +42,14 @@ function removeword() {
         // Show rectangle with custom words
         document.getElementById("rList").hidden = false;
         // Removes spaces
-        // if (!sessionStorage.getItem("searchQuery").includes(word.replace(/\s/g, '+'))){
-        //     if (sessionStorage.getItem("searchQuery") == "") {
-        //         sessionStorage.setItem("searchQuery", word.replace(/\s/g, '+'));
-        //     }
-        //     else {
-        //         sessionStorage.setItem("searchQuery", sessionStorage.getItem("searchQuery") + "+" + word.replace(/\s/g, '+'));
-        //     }
-        // }
+        if (!sessionStorage.getItem("removeQuery").includes("-" + word.replace(/\s/g, '+-'))){
+            if (sessionStorage.getItem("removeQuery") == "") {
+                sessionStorage.setItem("removeQuery","-" + word.replace(/\s/g, '+-'));
+            }
+            else {
+                sessionStorage.setItem("removeQuery", sessionStorage.getItem("removeQuery") + "+-" + word.replace(/\s/g, '+-'));
+            }
+        }
     }
 }
 
@@ -60,7 +61,6 @@ function clearList() {
     }
     // hides the rectangle of custom words
     document.getElementById("aList").hidden = true;
-    // document.getElementById("clearinglist").hidden = true;
     // clears the custom added words
     sessionStorage.setItem("searchQuery", "");
 }
@@ -73,7 +73,8 @@ function clearRList() {
     }
     // Hides the rectangle of custom words
     document.getElementById("rList").hidden = true;
-    // document.getElementById("clearingRlist").hidden = true;
+    // clears the custom removed words
+    sessionStorage.setItem("removeQuery", "");
 }
 
 // Prevents the ENTER key from clearing element
@@ -389,6 +390,9 @@ function startSearch() {
     var hq = ""
 
     var q = sessionStorage.getItem("searchQuery") + '+' + location.replace(/\s/g, '+')
+    if(!sessionStorage.getItem('removeQuery') == ""){
+        q = q + "+" + sessionStorage.getItem("removeQuery")
+    }
     console.log(q)
 
     console.log(sessionStorage.getItem("search"));
