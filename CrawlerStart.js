@@ -470,6 +470,7 @@ function makePageButtons(numPages) {
                 ele.style = "display: inline-block;"
             } else {
                 ele.hidden = true;
+                ele.style = "display: none;";
             }
         }
     }
