@@ -3,6 +3,7 @@ window.onload = function initialize() {
     sessionStorage.setItem("searchQuery", "")
     sessionStorage.setItem("removeQuery","")
     sessionStorage.setItem("search", 1)
+    sessionStorage.setItem("toSave",[]);
 }
 
 function addword() {
@@ -481,11 +482,16 @@ function setPage(thePage) {
 }
 
 function addtoExcel(resNum){
+    var rows = sessionStorage.getItem("toSave");
     console.log(resNum);
     var results = document.getElementById("results").children;
     var theResult = results[resNum];
     var parts = theResult.children;
     console.log(parts);
+    // title = parts[0].innerText, smallLink = parts[2].innerText, biglink = parts[4], blurb = parts[5]
+    var tempArray = [parts[0].innerText, parts[2].innerText, parts[4].innerText, parts[5].innerText];
+    rows.push(tempArray);
+    sessionStorage.setItem("toSave",rows);
     var button = document.getElementById("excelButton"+resNum);
     button.disabled = true;
     button.innerText = "Added";
@@ -494,5 +500,5 @@ function addtoExcel(resNum){
 }
 
 function saveSpreadsheet(){
-
+    var csv = sessionStorage.getItem("toSave");
 }
