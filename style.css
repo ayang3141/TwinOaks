@@ -451,3 +451,7 @@ button.pageButton{
     padding-top: 10px;
     width: 98%;
 }
+
+#saveSpreadsheet{
+    float:right;
+}

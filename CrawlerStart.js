@@ -489,4 +489,10 @@ function addtoExcel(resNum){
     var button = document.getElementById("excelButton"+resNum);
     button.disabled = true;
     button.innerText = "Added";
+    document.getElementById("saveSpreadsheet").hidden = false;
+    document.getElementById("saveSpreadsheet").style = "display: inline-block;";
+}
+
+function saveSpreadsheet(){
+
 }
