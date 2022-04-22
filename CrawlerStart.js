@@ -1,10 +1,11 @@
 window.onload = function initialize() {
     // Setting up session storage variables to be clear
     sessionStorage.setItem("searchQuery", "")
-    sessionStorage.setItem("removeQuery","")
+    sessionStorage.setItem("removeQuery", "")
     sessionStorage.setItem("search", 1)
-    sessionStorage.setItem("toSave",[]);
+
 }
+var toSave = [["Title", "Large Link", "Small Link", "Snippet"]]
 
 function addword() {
     var word = document.getElementById("keywordInput").value;
@@ -43,9 +44,9 @@ function removeword() {
         // Show rectangle with custom words
         document.getElementById("rList").hidden = false;
         // Removes spaces
-        if (!sessionStorage.getItem("removeQuery").includes("-" + word.replace(/\s/g, '+-'))){
+        if (!sessionStorage.getItem("removeQuery").includes("-" + word.replace(/\s/g, '+-'))) {
             if (sessionStorage.getItem("removeQuery") == "") {
-                sessionStorage.setItem("removeQuery","-" + word.replace(/\s/g, '+-'));
+                sessionStorage.setItem("removeQuery", "-" + word.replace(/\s/g, '+-'));
             }
             else {
                 sessionStorage.setItem("removeQuery", sessionStorage.getItem("removeQuery") + "+-" + word.replace(/\s/g, '+-'));
@@ -393,7 +394,7 @@ function startSearch() {
     var hq = ""
 
     var q = sessionStorage.getItem("searchQuery") + '+' + location.replace(/\s/g, '+')
-    if(!sessionStorage.getItem('removeQuery') == ""){
+    if (!sessionStorage.getItem('removeQuery') == "") {
         q = q + "+" + sessionStorage.getItem("removeQuery")
     }
     console.log(q)
@@ -481,24 +482,37 @@ function setPage(thePage) {
     startSearch();
 }
 
-function addtoExcel(resNum){
-    var rows = sessionStorage.getItem("toSave");
-    console.log(resNum);
+function addtoExcel(resNum) {
     var results = document.getElementById("results").children;
     var theResult = results[resNum];
     var parts = theResult.children;
-    console.log(parts);
+    //console.log(parts);
     // title = parts[0].innerText, smallLink = parts[2].innerText, biglink = parts[4], blurb = parts[5]
-    var tempArray = [parts[0].innerText, parts[2].innerText, parts[4].innerText, parts[5].innerText];
-    rows.push(tempArray);
-    sessionStorage.setItem("toSave",rows);
-    var button = document.getElementById("excelButton"+resNum);
+    const tempArray = [parts[0].innerText, parts[4].innerText, parts[2].innerText, parts[5].innerText.replace(/,/g, "").];
+    console.log(tempArray)
+    var toAdd = true;
+    for (var i = 0; i < toSave.length; i++) {
+        console.log(toSave[i])
+        if (tempArray[1] == toSave[i][1]) {
+            toAdd = null;
+        }
+    }
+    if(toAdd)
+        toSave.push(tempArray);
+    var button = document.getElementById("excelButton" + resNum);
     button.disabled = true;
     button.innerText = "Added";
     document.getElementById("saveSpreadsheet").hidden = false;
     document.getElementById("saveSpreadsheet").style = "display: inline-block;";
 }
 
-function saveSpreadsheet(){
-    var csv = sessionStorage.getItem("toSave");
+
+
+
+function saveSpreadsheet() {
+    let csvContent = "data:text/csv;charset=utf-8,"
+        + toSave.map(e => e.join(",")).join("\n");
+
+    var encodedUri = encodeURI(csvContent);
+    window.open(encodedUri);
 }
