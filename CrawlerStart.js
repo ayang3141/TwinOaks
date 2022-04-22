@@ -488,7 +488,7 @@ function addtoExcel(resNum) {
     var parts = theResult.children;
     //console.log(parts);
     // title = parts[0].innerText, smallLink = parts[2].innerText, biglink = parts[4], blurb = parts[5]
-    const tempArray = [parts[0].innerText, parts[4].innerText, parts[2].innerText, parts[5].innerText.replace(/,/g, "").];
+    const tempArray = [parts[0].innerText, parts[4].innerText, parts[2].innerText, parts[5].innerText.replace(/,/g, "")];
     console.log(tempArray)
     var toAdd = true;
     for (var i = 0; i < toSave.length; i++) {
