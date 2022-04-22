@@ -484,6 +484,8 @@ function addtoExcel(resNum){
     console.log(resNum);
     var results = document.getElementById("results").children;
     var theResult = results[resNum];
+    var parts = theResult.children;
+    console.log(parts);
     var button = document.getElementById("excelButton"+resNum);
     button.disabled = true;
     button.innerText = "Added";
