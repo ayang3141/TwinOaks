@@ -371,7 +371,7 @@ a.resLink{
 p.blurb{
     font-size: 16px;
     margin-bottom: 11px;
-    line-height: 14px;
+    line-height: 24px;
 }
 
 /* Links inside the dropdown */
@@ -390,6 +390,18 @@ p.blurb{
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
     display: block;
+}
+
+.excel {
+
+}
+
+.leftSide{
+    display: inline-block;
+}
+
+.rightSide{
+    display: inline-block;
 }
 
 /* changing the width for the inputs */

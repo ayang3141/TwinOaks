@@ -415,10 +415,14 @@
                     console.log(item.snippet);
                     console.log(item.fileFormat);
                     // Make and add the rectangle for the result
-                    res.innerHTML = '<a class="resTitle" href="' + item.link + '" target="_blank">' + item.title + "</a> <br>" +
+                    res.innerHTML = 
+                    // '<div class="leftSide">' + 
+                    '<a class="resTitle" href="' + item.link + '" target="_blank">' + item.title + "</a> <br>" +
                         '<a class="smallLink" href="' + item.link + '" target="_blank">' + item.displayLink + "</a> <br>" +
                         '<a class="smallLink" href="' + item.link + '" target="_blank">' + item.link + "</a>" + 
-                        '<p class="blurb">' + item.snippet + '<p>';
+                        '<p class="blurb">' + item.snippet + '</p>' + 
+                        // '</div><div class="rightSide">
+                        '<button class="excel" id="excelButton'+ i +'" onclick="addtoExcel('+ i + ');">Add to Spreadsheet</button>';
                     
                     list.appendChild(res);
                     // console.log(item);

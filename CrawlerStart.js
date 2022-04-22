@@ -479,3 +479,12 @@ function setPage(thePage) {
     document.getElementById("pageNum").innerText = "Page: " + (Math.trunc(sessionStorage.getItem("search") / 10) + 1);
     startSearch();
 }
+
+function addtoExcel(resNum){
+    console.log(resNum);
+    var results = document.getElementById("results").children;
+    var theResult = results[resNum];
+    var button = document.getElementById("excelButton"+resNum);
+    button.disabled = true;
+    button.innerText = "Added";
+}
