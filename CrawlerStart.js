@@ -495,7 +495,7 @@ function addtoExcel(resNum) {
     for (var i = 0; i < toSave.length; i++) {
         console.log(toSave[i])
         if (tempArray[1] == toSave[i][1]) {
-            toAdd = null;
+            toAdd = false;
         }
     }
     if(toAdd)
